@@ -18,7 +18,8 @@ Prepare This Readme.
 	2. What I plan do to till the next meeting
 	3. Are there any issues that the team can help me with.
 	
-	
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 * IDEA: Educational-based 3D Simulation of Physics problems. User would enter inputs and the game would simulate said inputs.
 
 * PLATFORM: Mac/PC with possiblity for future cross-platform compatability
