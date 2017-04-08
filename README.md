@@ -30,7 +30,6 @@ Prepare This Readme.
 
 * 
 ---
-//TODO
 
 
 
@@ -45,7 +44,7 @@ Focus on Mockups and design issues. Target what type of physics problems we will
 Work on Menus - Jimmy
 Work on Buttons - Anthony
 Work on Various User Inputs - Elric
-//TODO
+
 ###Scrum meeting notes:
 //TODO
 
@@ -55,7 +54,7 @@ Each TM will implement 1-2 physics problems to be simulated.
 Will work on Kinematics - Anthony
 Will work on Dynamics - Jimmy
 Will work on Waves - Elric
-//TODO
+
 ###Scrum meeting notes:
 //TODO
 
@@ -64,7 +63,7 @@ Will work on Waves - Elric
 Work on scene demoing Kinematics -  Anthony
 Work on scene demoing Dynamics - Jimmy
 Work on scene demoing Waves - Elric
-//TODO
+
 ###Scrum meeting notes:
 //TODO
 
@@ -73,14 +72,14 @@ Work on scene demoing Waves - Elric
 Work on showing results to screen - Anthony
 Work on saving/loading simulations - Jimmy
 Work on prefabs - Elric
-//TODO
+
 ###Scrum meeting notes:
 //TODO
 
 ---
 ##Due 05/20:DEMO DAY
 Present to class - Somebody
-//TODO
+
 ###Scrum meeting notes:
 //TODO
 
