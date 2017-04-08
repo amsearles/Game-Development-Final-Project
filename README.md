@@ -34,6 +34,7 @@ Prepare This Readme.
 
 
 ##Due 04/15:
+
 Focus on Mockups and design issues. Target what type of physics problems we will be simulating. Determine best practices that will be used. Class diagrams will be decided upon. -All TM
 
 ###Scrum meeting notes:
@@ -42,6 +43,7 @@ Focus on Mockups and design issues. Target what type of physics problems we will
 
 ---
 ##Due 04/22: 
+
  Work on Menus - Jimmy
  
 Work on Buttons - Anthony
@@ -54,6 +56,7 @@ Work on Various User Inputs - Elric
 
 ---
 ##Due 04/29:
+
 Each TM will implement 1-2 physics problems to be simulated.
 
 Will work on Kinematics - Anthony
@@ -68,6 +71,7 @@ Will work on Waves - Elric
 
 ---
 ##Due 05/06:
+
 Work on scene demoing Kinematics -  Anthony
 
 Work on scene demoing Dynamics - Jimmy
@@ -80,6 +84,7 @@ Work on scene demoing Waves - Elric
 
 ---
 ##Due 05/13:
+
 Work on showing results to screen - Anthony
 
 Work on saving/loading simulations - Jimmy
