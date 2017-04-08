@@ -99,6 +99,7 @@ Work on QA, debugging, etc. - Elric
 ##Due 05/20:DEMO DAY
 
 Present to class - Somebody
+Moral support/ help with slides - Other two
 
 ###Scrum meeting notes:
 
