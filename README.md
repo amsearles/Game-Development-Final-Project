@@ -89,7 +89,7 @@ Work on showing results to screen - Anthony
 
 Work on saving/loading simulations - Jimmy
 
-Work on prefabs - Elric
+Work on QA, debugging, etc. - Elric
 
 ###Scrum meeting notes:
 
