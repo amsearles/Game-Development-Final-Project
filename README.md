@@ -17,15 +17,24 @@ Prepare This Readme.
 	1. What have I dont since our last meeting
 	2. What I plan do to till the next meeting
 	3. Are there any issues that the team can help me with.
+	
+	
+* IDEA: Educational-based 3D Simulation of Physics problems. User would enter inputs and the game would simulate said inputs.
 
+* PLATFORM: Mac/PC with possiblity for future cross-platform compatability
 
+* MEETINGS: On Thursdays 2-4pm
+
+* Git Repo Manager: Jimmy, We will try and utilize Unity Collab.
+
+* 
 
 //TODO
 
 
 
 ##Due 04/15:
-//TODO
+
 ###Scrum meeting notes:
 //TODO
 
