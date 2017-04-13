@@ -1,3 +1,4 @@
+https://docs.google.com/document/d/1hWoinUAbP5wlRNFJ0ov8vTejgj5cC5cCUm3oBFIoAQA/edit?usp=sharing
 #Final Project - Title //TODO
 Detailed Description (Add pictures/videos by Demo day) //todo
 
