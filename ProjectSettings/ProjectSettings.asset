@@ -460,7 +460,8 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Collab: 1
   cloudProjectId: e9b99290-a177-45cc-b43d-fdbde397d2f4
   projectName: Team12-final-project (1)
   organizationId: ndc0383
