@@ -21,7 +21,7 @@ Prepare This Readme.
 	
 ---
 
-* IDEA: Educational-based 3D Simulation of Physics problems. User would enter inputs and the game would simulate said inputs.
+* IDEA: A topdown asteroid shooter/dodge game where the goal is to dodge and destroy enemies will incrementing your score.
 
 * PLATFORM: Mac/PC with possiblity for future cross-platform compatibility
 
@@ -47,9 +47,9 @@ Focus on Mockups and design issues. Target what type of physics problems we will
 
  Work on Menus - Jimmy
  
-Work on Buttons - Anthony
+Work on an Enemy  - Anthony
 
-Work on Various User Inputs - Elric
+Work on Player - Elric
 
 ###Scrum meeting notes:
 
