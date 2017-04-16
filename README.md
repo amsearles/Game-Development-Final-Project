@@ -1,5 +1,5 @@
 #Final Project - [Game Name: Currently Undecided]
-[Insert Game Name] is a 2D rapid pace game. The concept is a combination of classic games such as Snake and Asteroids. The player will control a star and emit a star trail to prevent enemies from passing. However, the twist is that the player must not collide with their own star trail as well as enemies, otherwise they will suffer damage or destruction. The player will be given a score and lives to 
+[Insert Game Name] is a 2D rapid pace game. The concept is a combination of classic games such as Snake and Asteroids. The player will control a star and emit a star trail to prevent enemies from passing. However, the twist is that the player must not collide with their own star trail as well as enemies, otherwise they will suffer damage or destruction. The player will be given a score and lives.
 [Insert Game Name] is set to be simplistic enough to be playable as a mobile app but provide an intense challenge to any player. 
 
 #Platform
