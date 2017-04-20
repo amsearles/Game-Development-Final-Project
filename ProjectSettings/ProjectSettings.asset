@@ -4,14 +4,14 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  productGUID: 4b542539823988d44a366ea35f81a8d5
+  productGUID: bb4ad8ff276349543b6905be32b082fd
   AndroidProfiler: 0
   defaultScreenOrientation: 4
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Team12-final-project
+  productName: finalproject_team12
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21176471, a: 1}
@@ -386,14 +386,14 @@ PlayerSettings:
   additionalIl2CppArgs: 
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Team12-final-project
+  metroPackageName: finalproject_team12
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Team12-final-project
+  metroApplicationDescription: finalproject_team12
   wsaImages: {}
   metroTileShortName: 
   metroCommandLineArgsFile: 
@@ -463,7 +463,7 @@ PlayerSettings:
   cloudServicesEnabled:
     Collab: 1
     UNet: 1
-  cloudProjectId: e9b99290-a177-45cc-b43d-fdbde397d2f4
-  projectName: Team12-final-project (1)
-  organizationId: ndc0383
+  cloudProjectId: f3bf881a-564b-435c-bf11-59a8bd3df5af
+  projectName: finalproject_team12
+  organizationId: asearles
   cloudEnabled: 0
