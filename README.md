@@ -1,55 +1,44 @@
+#Final Project - [Game Name: Currently Undecided]
+[Insert Game Name] is a 2D rapid pace game. The concept is a combination of classic games such as Snake and Asteroids. The player will control a star and emit a star trail to prevent enemies from passing. However, the twist is that the player must not collide with their own star trail as well as enemies, otherwise they will suffer damage or destruction. The player will be given a score and lives.
+[Insert Game Name] is set to be simplistic enough to be playable as a mobile app but provide an intense challenge to any player. 
+
+#Platform
+Desktop (hopefully adaptable to targeted platform: Android)
+
+#Final Project - Documentation (In Progress)
 https://docs.google.com/document/d/1hWoinUAbP5wlRNFJ0ov8vTejgj5cC5cCUm3oBFIoAQA/edit?usp=sharing
-#Final Project - Title //TODO
-Detailed Description (Add pictures/videos by Demo day) //todo
+
+#Final Project - Class Diagram (In Progress)
+https://drive.google.com/file/d/0B9t3Wj73SIawOWtuckx4azVkVmM/view?usp=sharing
+
+#Meeting Date
+Thursdays 2-4pm
+
+#Due Dates / Milestones
 
 ##Due 04/08:
-Prepare This Readme. 
-//TODO
-
-* Decide on the Idea.
-* Decide on the target platform(Mac/Android/IOS,etc).
-* Discuss weekly scrum meeting times outside of class times. Can be remote meetings, but in-person meetings are highly recommended.
-* Decide who is going to be the manager for the Git Repo. 
-* Write out the various milestones below in the following format "Requirement - person responsible."
-* Example: "Prepare health manager and mechanism for all relevant players to have a health component - Omar" 
-* Make sure you discuss the idea and milestones with me on the first day, or anytime you decide to pivot your project.
-* You must have access to your target platform in order to build for it (ex: Must have an android phone for android projects, Must have a Daydream ready phone and controller for Daydream project. Tango device for a tango project. A nintendo switch dev kit for nintendo switch project.)
-* Each of your team members must answer the following in your **scrum meetings**:
-	1. What have I dont since our last meeting
-	2. What I plan do to till the next meeting
-	3. Are there any issues that the team can help me with.
-	
----
-
-* IDEA: Educational-based 3D Simulation of Physics problems. User would enter inputs and the game would simulate said inputs.
-
-* PLATFORM: Mac/PC with possiblity for future cross-platform compatibility
-
-* MEETINGS: On Thursdays 2-4pm
-
-* Git Repo Manager: Jimmy, We will try and utilize Unity Collab.
-
-* 
----
-
+Prepare This Readme.
 
 
 ##Due 04/15:
 
-Focus on Mockups and design issues. Target what type of physics problems we will be simulating. Determine best practices that will be used. Class diagrams will be decided upon. -All TM
+Focus on Mockups and design issues. Determine best practices that will be used. Class diagrams will be decided upon.
 
 ###Scrum meeting notes:
-
-//TODO
+* Find assets and agree upon the selection.
+* Create Class Diagram.
+* Think of more ideas and approaches to the project.
 
 ---
 ##Due 04/22: 
 
- Work on Menus - Jimmy
+Work on Menus - Jimmy
  
-Work on Buttons - Anthony
+Work on Enemies - Anthony
 
-Work on Various User Inputs - Elric
+Work on Player - Elric
+
+Goal: hopefully create a basic prototype as a proof of concept by this 4/22.
 
 ###Scrum meeting notes:
 
@@ -58,13 +47,7 @@ Work on Various User Inputs - Elric
 ---
 ##Due 04/29:
 
-Each TM will implement 1-2 physics problems to be simulated.
-
-Will work on Kinematics - Anthony
-
-Will work on Dynamics - Jimmy
-
-Will work on Waves - Elric
+To be determined.
 
 ###Scrum meeting notes:
 
@@ -73,11 +56,7 @@ Will work on Waves - Elric
 ---
 ##Due 05/06:
 
-Work on scene demoing Kinematics -  Anthony
-
-Work on scene demoing Dynamics - Jimmy
-
-Work on scene demoing Waves - Elric
+To be determined.
 
 ###Scrum meeting notes:
 
@@ -86,11 +65,7 @@ Work on scene demoing Waves - Elric
 ---
 ##Due 05/13:
 
-Work on showing results to screen - Anthony
-
-Work on saving/loading simulations - Jimmy
-
-Work on QA, debugging, etc. - Elric
+To be determined
 
 ###Scrum meeting notes:
 
@@ -98,6 +73,8 @@ Work on QA, debugging, etc. - Elric
 
 ---
 ##Due 05/20:DEMO DAY
+
+Check for bugs/crashes and try to optimize if possible.
 
 Present to class - Somebody
 
@@ -119,4 +96,6 @@ Moral support/ help with slides - Other two
 * Individual grading criteria: Saturday interviews, github commits, eventual team review form.
 * Group Grading criteria: The usual grading criterial at the end of the project.(Fun to play, no bugs, Good contextual art, other minor things).
 * You have been allocated Git LFS storage space on GitHub. You must use it if you intend to upload large files.
+
+
 
