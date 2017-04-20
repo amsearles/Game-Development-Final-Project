@@ -5680,7 +5680,7 @@ GameObject:
   - component: {fileID: 1637627685}
   - component: {fileID: 1637627684}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: Jim_GameController
   m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
