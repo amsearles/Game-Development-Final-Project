@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MenuMain : MonoBehaviour {
 
+    public Sprite scrollBackground;
+
 	// Use this for initialization
 	void Start () {
 		
