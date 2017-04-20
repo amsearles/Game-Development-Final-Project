@@ -41,7 +41,10 @@ Work on Player - Elric
 Goal: hopefully create a basic prototype as a proof of concept by this 4/22.
 
 ###Scrum meeting notes:
-
+* Merged our respective works into one scene in unity collab.
+* Go through all the bugs involved with merging, fixed each one.
+* Emphasis on consistent publishes to unity collab
+* Polish scene and adjust values to have a better prototype by Saturday.
 //TODO
 
 ---
