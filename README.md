@@ -50,9 +50,13 @@ Goal: hopefully create a basic prototype as a proof of concept by this 4/22.
 ---
 ##Due 04/29:
 
-To be determined.
+Work on Powerups- Elric
+Work on enemy projectiles- Jimmy
+Work on trail - Anthony
 
 ###Scrum meeting notes:
+* fixed the bugs we had
+* decided to focus on one singlelevel with an ever increasing difficulty
 
 //TODO
 
@@ -61,7 +65,7 @@ To be determined.
 
 To be determined.
 
-###Scrum meeting notes:
+###Scrum meeting notesficulty
 
 //TODO
 
