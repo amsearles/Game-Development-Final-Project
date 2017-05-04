@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: e66b6cb73d58b4647b191e97ab92ee2b
+timeCreated: 1482068055
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Cap
+    100002: Cap_2_Left
+    100004: Cap_2_Right
+    100006: Cockpit
+    100008: Engine_Left
+    100010: Engine_Right
+    100012: Exhaust
+    100014: Large_Thruster_Left
+    100016: Large_Thruster_Right
+    100018: Launcher
+    100020: Left_Support
+    100022: Left_Wing_H
+    100024: Left_Wing_V
+    100026: //RootNode
+    100028: Right_Support
+    100030: Right_Wing_H
+    100032: Right_Wing_V
+    100034: Vents
+    400000: Cap
+    400002: Cap_2_Left
+    400004: Cap_2_Right
+    400006: Cockpit
+    400008: Engine_Left
+    400010: Engine_Right
+    400012: Exhaust
+    400014: Large_Thruster_Left
+    400016: Large_Thruster_Right
+    400018: Launcher
+    400020: Left_Support
+    400022: Left_Wing_H
+    400024: Left_Wing_V
+    400026: //RootNode
+    400028: Right_Support
+    400030: Right_Wing_H
+    400032: Right_Wing_V
+    400034: Vents
+    2300000: Cap
+    2300002: Cap_2_Left
+    2300004: Cap_2_Right
+    2300006: Cockpit
+    2300008: Engine_Left
+    2300010: Engine_Right
+    2300012: Exhaust
+    2300014: Large_Thruster_Left
+    2300016: Large_Thruster_Right
+    2300018: Launcher
+    2300020: Left_Support
+    2300022: Left_Wing_H
+    2300024: Left_Wing_V
+    2300026: Right_Support
+    2300028: Right_Wing_H
+    2300030: Right_Wing_V
+    2300032: Vents
+    3300000: Cap
+    3300002: Cap_2_Left
+    3300004: Cap_2_Right
+    3300006: Cockpit
+    3300008: Engine_Left
+    3300010: Engine_Right
+    3300012: Exhaust
+    3300014: Large_Thruster_Left
+    3300016: Large_Thruster_Right
+    3300018: Launcher
+    3300020: Left_Support
+    3300022: Left_Wing_H
+    3300024: Left_Wing_V
+    3300026: Right_Support
+    3300028: Right_Wing_H
+    3300030: Right_Wing_V
+    3300032: Vents
+    4300000: Cockpit
+    4300002: Engine_Right
+    4300004: Launcher
+    4300006: Cap
+    4300008: Vents
+    4300010: Right_Support
+    4300012: Large_Thruster_Right
+    4300014: Cap_2_Left
+    4300016: Exhaust
+    4300018: Left_Wing_V
+    4300020: Left_Wing_H
+    4300022: Right_Wing_V
+    4300024: Right_Wing_H
+    4300026: Engine_Left
+    4300028: Left_Support
+    4300030: Large_Thruster_Left
+    4300032: Cap_2_Right
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

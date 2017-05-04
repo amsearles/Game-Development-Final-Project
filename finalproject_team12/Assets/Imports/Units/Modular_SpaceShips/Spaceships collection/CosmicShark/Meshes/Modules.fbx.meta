@@ -1,0 +1,124 @@
+fileFormatVersion: 2
+guid: a801e2485819f724cb4ec70984316637
+timeCreated: 1482062909
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Body
+    100002: Heavy_Thruster
+    100004: Hull
+    100006: Left_Rear_Wing
+    100008: Left_Wing
+    100010: //RootNode
+    100012: Right_Rear_Wing
+    100014: Right_Wing
+    100016: Thruster
+    100018: Weapon
+    100020: Camera
+    100022: Directional Light
+    400000: Body
+    400002: Heavy_Thruster
+    400004: Hull
+    400006: Left_Rear_Wing
+    400008: Left_Wing
+    400010: //RootNode
+    400012: Right_Rear_Wing
+    400014: Right_Wing
+    400016: Thruster
+    400018: Weapon
+    400020: Camera
+    400022: Directional Light
+    2300000: Body
+    2300002: Heavy_Thruster
+    2300004: Hull
+    2300006: Left_Rear_Wing
+    2300008: Left_Wing
+    2300010: Right_Rear_Wing
+    2300012: Right_Wing
+    2300014: Thruster
+    2300016: Weapon
+    3300000: Body
+    3300002: Heavy_Thruster
+    3300004: Hull
+    3300006: Left_Rear_Wing
+    3300008: Left_Wing
+    3300010: Right_Rear_Wing
+    3300012: Right_Wing
+    3300014: Thruster
+    3300016: Weapon
+    4300000: Body
+    4300002: Hull
+    4300004: Heavy_Thruster
+    4300006: Thruster
+    4300008: Left_Rear_Wing
+    4300010: Weapon
+    4300012: Left_Wing
+    4300014: Right_Wing
+    4300016: Right_Rear_Wing
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

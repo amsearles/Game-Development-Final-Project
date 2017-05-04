@@ -1,0 +1,139 @@
+fileFormatVersion: 2
+guid: 24301483df2ee6f49bba7d08c3ee18f4
+timeCreated: 1482760342
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Cockpit
+    100002: Left_Arm
+    100004: Left_Back_Thruster
+    100006: Left_Front_Thruster
+    100008: Left_Tail_Wing
+    100010: Left_Wing
+    100012: //RootNode
+    100014: Right_Arm
+    100016: Right_Back_Thruster
+    100018: Right_Front_Thruster
+    100020: Right_Tail_Wing
+    100022: Right_Wing
+    100024: Support
+    100026: Wepon
+    400000: Cockpit
+    400002: Left_Arm
+    400004: Left_Back_Thruster
+    400006: Left_Front_Thruster
+    400008: Left_Tail_Wing
+    400010: Left_Wing
+    400012: //RootNode
+    400014: Right_Arm
+    400016: Right_Back_Thruster
+    400018: Right_Front_Thruster
+    400020: Right_Tail_Wing
+    400022: Right_Wing
+    400024: Support
+    400026: Wepon
+    2300000: Cockpit
+    2300002: Left_Arm
+    2300004: Left_Back_Thruster
+    2300006: Left_Front_Thruster
+    2300008: Left_Tail_Wing
+    2300010: Left_Wing
+    2300012: Right_Arm
+    2300014: Right_Back_Thruster
+    2300016: Right_Front_Thruster
+    2300018: Right_Tail_Wing
+    2300020: Right_Wing
+    2300022: Support
+    2300024: Wepon
+    3300000: Cockpit
+    3300002: Left_Arm
+    3300004: Left_Back_Thruster
+    3300006: Left_Front_Thruster
+    3300008: Left_Tail_Wing
+    3300010: Left_Wing
+    3300012: Right_Arm
+    3300014: Right_Back_Thruster
+    3300016: Right_Front_Thruster
+    3300018: Right_Tail_Wing
+    3300020: Right_Wing
+    3300022: Support
+    3300024: Wepon
+    4300000: Cockpit
+    4300002: Left_Arm
+    4300004: Wepon
+    4300006: Left_Front_Thruster
+    4300008: Left_Back_Thruster
+    4300010: Left_Wing
+    4300012: Left_Tail_Wing
+    4300014: Support
+    4300016: Right_Tail_Wing
+    4300018: Right_Wing
+    4300020: Right_Arm
+    4300022: Right_Back_Thruster
+    4300024: Right_Front_Thruster
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
