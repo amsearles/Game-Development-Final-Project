@@ -15,8 +15,9 @@ public class AIMoveStraight : MonoBehaviour {
     private void FixedUpdate()
     {
         Transform transform = GetComponent<Transform>();
-        transform.Translate(transform.forward * gameUnit.speed * Time.deltaTime);
-        
+        //transform.Translate(transform.forward * gameUnit.speed * Time.deltaTime);
+        transform.position += transform.forward * gameUnit.speed * Time.deltaTime;
+
         //Rigidbody rigidbody = GetComponent<Rigidbody>();
         //rigidbody.MovePosition(transform.position + transform.forward * gameUnit.speed * Time.deltaTime);
     }

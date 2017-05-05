@@ -15,17 +15,17 @@ public class GameUnitShip : GameUnit {
     }
 
     // TEMPORARY: This is set to always shoot when available. Move this elsewhere, maybe an AI script or something.
-    //private void Update()
-    //{
-    //    //If this ship has a weapon and have firing ports to spawn the projectiles...
-    //    if ((weapon != null) && (weapon.canFire()) && (firingPorts.Length != 0))
-    //    {
-    //        weapon.Fire(firingPorts[projSpawnPtsIndex].transform);
+    private void Update()
+    {
+        //If this ship has a weapon and have firing ports to spawn the projectiles...
+        if ((weapon != null) && (weapon.canFire()) && (firingPorts.Length != 0))
+        {
+            weapon.Fire(firingPorts[projSpawnPtsIndex].transform);
 
-    //        //Reset values.
-    //        projSpawnPtsIndex = (projSpawnPtsIndex + 1) % firingPorts.Length;
-    //    }
-    //}
+            //Reset values.
+            projSpawnPtsIndex = (projSpawnPtsIndex + 1) % firingPorts.Length;
+        }
+    }
 
 
 }

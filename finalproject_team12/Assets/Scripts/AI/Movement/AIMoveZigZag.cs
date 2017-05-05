@@ -5,10 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(GameUnitShip))]
 public class AIMoveZigZag : MonoBehaviour {
 
-    [Tooltip("Speed of moving left and right.")]
-    public float zigzagSpeed = 0.3f;
-    [Tooltip("Duration in SECONDS of far left and right the object will go.")]
-    public float zigzagWaveHeight = 1.5f;
+    [Tooltip("The speed of moving left and right.\n" +
+                "That is, the value going between 0 and the given wave height.")]
+    public float zigzagFrequency = 3f;
+    [Tooltip("The distance of moving to either left or right followed by the same distance in the opposite direction.\n" +
+                "That is, the value of which frequency must reach before moving in the opposite direction")]
+    public float zigzagWaveHeight = 5f;
 
     private GameUnitShip gameUnit;
 
@@ -24,14 +26,18 @@ public class AIMoveZigZag : MonoBehaviour {
         Transform transform = GetComponent<Transform>();
         
         // Determine the current oscillating value between -1*(zigzagHeight/2) and zigzagHeight/2
-        float pingpong = Mathf.PingPong(Time.time * zigzagSpeed, zigzagWaveHeight) - (zigzagWaveHeight / 2.0f);
+        float pingpong = Mathf.PingPong(Time.time * zigzagFrequency, 2*zigzagWaveHeight) - zigzagWaveHeight;
 
         // Move the object via its Right direction axis.
-        transform.Translate(transform.right * pingpong * Time.deltaTime);
+        transform.position += transform.right * pingpong * Time.deltaTime;
 
         // Move the object via its Forward direction axis.
-        transform.Translate(transform.forward * gameUnit.speed * Time.deltaTime);
-        
+        transform.position += transform.forward * gameUnit.speed * Time.deltaTime;
+
+        //Rigidbody rigidbody = GetComponent<Rigidbody>();
+        //rigidbody.MovePosition(transform.position + transform.right * pingpong * Time.deltaTime);
+        //rigidbody.MovePosition(transform.position + transform.forward * gameUnit.speed * Time.deltaTime);
+
     }
 
 

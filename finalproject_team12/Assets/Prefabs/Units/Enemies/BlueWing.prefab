@@ -147,7 +147,6 @@ GameObject:
   - component: {fileID: 54998434180331658}
   - component: {fileID: 114440011100837176}
   - component: {fileID: 114481155037557762}
-  - component: {fileID: 114870487684278672}
   m_Layer: 0
   m_Name: BlueWing
   m_TagString: Untagged
@@ -352,7 +351,7 @@ Transform:
   m_GameObject: {fileID: 1724298146902686}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 4.3}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4312860951963502}
   - {fileID: 4143179565779058}
@@ -511,7 +510,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eca5813dcbe5254d896c3b8e72d3d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireOnAllPorts: 1
 --- !u!114 &114399281586681060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -531,9 +529,10 @@ MonoBehaviour:
   - {fileID: 4299046306569362}
   - {fileID: 4882313668322830}
   - {fileID: 4396507235073994}
+  fireOnAllSpawns: 1
   infiniteAmmo: 1
   ammoCount: 10
-  rateOfFire: 0.3
+  rateOfFire: 3
 --- !u!114 &114440011100837176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -563,15 +562,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f93eec1a9945049b261216f3e2f111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114870487684278672
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1724298146902686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3eca5813dcbe5254d896c3b8e72d3d4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireOnAllPorts: 1

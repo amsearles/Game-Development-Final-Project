@@ -19,13 +19,14 @@ public class WeaponV2 : MonoBehaviour {
              "False = Fire one projectile at a time while cycling through each Weapon's projectile spawn point.")]
     public bool fireOnAllSpawns = true;
 
-    [Tooltip("If inifinite ammo is true then ammo count will not decrease.")]
+    [Tooltip("If inifinite ammo is true then ammo count will not decrease upon firing.")]
     public bool     infiniteAmmo = true;
 
-    [Tooltip("The number of times this weapon can fire.")]
+    [Tooltip("The number of times this weapon can fire.\n" +
+                "Disregard this if infinite ammo is set to true.")]
     public int      ammoCount = 10;
 
-    [Tooltip("The delay in seconds between being able to fire.")]
+    [Tooltip("The delay in seconds between firing projectiles.")]
     public float    rateOfFire = 3.0f;
 
     private float   nextFire = 0.0f;
@@ -66,7 +67,6 @@ public class WeaponV2 : MonoBehaviour {
             // Spawn the projectile.
             if (fireOnAllSpawns)
             {
-                Debug.Log("TODO: Resolve Projectile identify friend or foe.");
                 foreach (Transform x in projectileSpawnLocations)
                 {
                     spawnPosition = x.position;
@@ -82,8 +82,7 @@ public class WeaponV2 : MonoBehaviour {
 
                 // Increment / loop the index.
                 projSpawnLocationIndex = (projSpawnLocationIndex + 1) % projectileSpawnLocations.Length;
-
-                Debug.Log("TODO: Resolve Projectile identify friend or foe.");
+                
                 Instantiate(projectile, spawnPosition, spawnRotation);
             }
             
