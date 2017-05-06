@@ -16,13 +16,13 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - GameUnits
+  - Players
+  - Enemies
+  - Projectiles
+  - Pickups
+  - PlayerProjectiles
+  - EnemyProjectiles
   - 
   - 
   - 

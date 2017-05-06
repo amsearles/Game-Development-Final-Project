@@ -2,20 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(WeaponV2))]
+[RequireComponent(typeof(Weapon))]
 public class AIFiringStraight : MonoBehaviour {
-
     
-    private WeaponV2 weapon;                            // Weapon to use in firing and manipulating.
-    //private Transform[] projectileSpawnLocations;       // Projectile Spawn Locations from Weapon.
-    //private int projSpawnLocationIndex = 0;             // Iterates each Projectile spawn location if fireOnAllPorts is false;
+    private Weapon weapon;          // Weapon to use in firing and manipulating.
+
 
 	// Use this for initialization
-	void Start () {
-        weapon = GetComponent<WeaponV2>();
-        //projectileSpawnLocations = weapon.GetProjectileSpawnLocations();
-
-        //Debug.Log(projectileSpawnLocations.Length);
+	private void Start () {
+        weapon = GetComponent<Weapon>();
 	}
 	
 	// Update is called once per frame

@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(GameUnitShip))]
+[RequireComponent(typeof(GameUnit))]
 public class AIMoveStraight : MonoBehaviour {
 
-    private GameUnitShip gameUnit;
+    private GameUnit gameUnit;
 
     private void Start()
     {
-        gameUnit = GetComponent<GameUnitShip>();
+        gameUnit = GetComponent<GameUnit>();
     }
 
     private void FixedUpdate()
     {
         Transform transform = GetComponent<Transform>();
         //transform.Translate(transform.forward * gameUnit.speed * Time.deltaTime);
-        transform.position += transform.forward * gameUnit.speed * Time.deltaTime;
+        transform.position += transform.forward * gameUnit.moveSpeed * Time.deltaTime;
 
         //Rigidbody rigidbody = GetComponent<Rigidbody>();
         //rigidbody.MovePosition(transform.position + transform.forward * gameUnit.speed * Time.deltaTime);

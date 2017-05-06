@@ -100,33 +100,17 @@
     <Compile Include="Assets\ElricsStuff\Scripts\PlayerUnit.cs" />
     <Compile Include="Assets\ElricsStuff\Scripts\PowerUp.cs" />
     <Compile Include="Assets\ElricsStuff\Scripts\TrailPowerUp.cs" />
-    <Compile Include="Assets\Imports\GUI\InstantGui\Scripts\Elements\InstantGuiButton.cs" />
-    <Compile Include="Assets\Imports\GUI\InstantGui\Scripts\Elements\InstantGuiElementsList.cs" />
-    <Compile Include="Assets\Imports\GUI\InstantGui\Scripts\Elements\InstantGuiGauge.cs" />
-    <Compile Include="Assets\Imports\GUI\InstantGui\Scripts\Elements\InstantGuiInputText.cs" />
-    <Compile Include="Assets\Imports\GUI\InstantGui\Scripts\Elements\InstantGuiList.cs" />
-    <Compile Include="Assets\Imports\GUI\InstantGui\Scripts\Elements\InstantGuiPopup.cs" />
-    <Compile Include="Assets\Imports\GUI\InstantGui\Scripts\Elements\InstantGuiSlider.cs" />
-    <Compile Include="Assets\Imports\GUI\InstantGui\Scripts\Elements\InstantGuiTabs.cs" />
-    <Compile Include="Assets\Imports\GUI\InstantGui\Scripts\Elements\InstantGuiTextArea.cs" />
-    <Compile Include="Assets\Imports\GUI\InstantGui\Scripts\Elements\InstantGuiToggle.cs" />
-    <Compile Include="Assets\Imports\GUI\InstantGui\Scripts\Elements\InstantGuiWindow.cs" />
-    <Compile Include="Assets\Imports\GUI\InstantGui\Scripts\InstantGui.cs" />
-    <Compile Include="Assets\Imports\GUI\InstantGui\Scripts\InstantGuiElement.cs" />
-    <Compile Include="Assets\Imports\GUI\InstantGui\Scripts\InstantGuiFrame.cs" />
-    <Compile Include="Assets\Imports\GUI\InstantGui\Scripts\InstantGuiStyle.cs" />
-    <Compile Include="Assets\Imports\GUI\InstantGui\Scripts\InstantGuiStyleSet.cs" />
     <Compile Include="Assets\Scripts\AI\Firing\AIFiringStraight.cs" />
     <Compile Include="Assets\Scripts\AI\Movement\AIMoveRotateAround.cs" />
     <Compile Include="Assets\Scripts\AI\Movement\AIMoveStraight.cs" />
     <Compile Include="Assets\Scripts\AI\Movement\AIMoveZigZag.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
-    <Compile Include="Assets\Scripts\GameObjectIdentifier.cs" />
-    <Compile Include="Assets\Scripts\GameUnits\EnemyShip.cs" />
-    <Compile Include="Assets\Scripts\GameUnits\GameUnitShip.cs" />
+    <Compile Include="Assets\Scripts\GameUnitIdentifier.cs" />
+    <Compile Include="Assets\Scripts\GameUnits\EnemyUnit.cs" />
+    <Compile Include="Assets\Scripts\GameUnits\GameUnitShip_OLD.cs" />
     <Compile Include="Assets\Scripts\Level\AbstractLevel.cs" />
     <Compile Include="Assets\Scripts\Level\LevelManager.cs" />
-    <Compile Include="Assets\Scripts\Projectiles\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Projectiles\ProjectileBullet.cs" />
     <Compile Include="Assets\Scripts\Projectiles\ProjectileMissile.cs" />
     <Compile Include="Assets\Scripts\UserInterface\Menu\AbstractMenu.cs" />
     <Compile Include="Assets\Scripts\UserInterface\Menu\MenuGameOver.cs" />
@@ -134,7 +118,7 @@
     <Compile Include="Assets\Scripts\UserInterface\Menu\MenuPause.cs" />
     <Compile Include="Assets\Scripts\UserInterface\UIManager.cs" />
     <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
-    <Compile Include="Assets\Scripts\Weapons\WeaponV2.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Weapon_OLD.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Imports\Environment\Sci-fi_platforms\Sci-fi_platforms.txt" />

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerUnit : GameUnitShip
+public class PlayerUnit : GameUnit
 {
 
     public int maxTrailSize = 10;

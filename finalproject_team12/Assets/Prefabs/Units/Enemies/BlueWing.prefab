@@ -145,8 +145,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4770422378581410}
   - component: {fileID: 54998434180331658}
-  - component: {fileID: 114440011100837176}
   - component: {fileID: 114481155037557762}
+  - component: {fileID: 114631844229496110}
   m_Layer: 0
   m_Name: BlueWing
   m_TagString: Untagged
@@ -349,8 +349,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1724298146902686}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 4.3}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4312860951963502}
@@ -358,7 +358,7 @@ Transform:
   - {fileID: 4593672918949216}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4882313668322830
 Transform:
   m_ObjectHideFlags: 1
@@ -458,7 +458,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1456607918030752}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.5, y: 0.8, z: 2}
@@ -470,7 +470,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1665919961407452}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.95, y: 0.8, z: 1.4999999}
@@ -482,7 +482,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1661965219710376}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.8, z: 1.5}
@@ -494,7 +494,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1949589862922578}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.95, y: 0.8, z: 1.4999999}
@@ -530,27 +530,12 @@ MonoBehaviour:
   - {fileID: 4882313668322830}
   - {fileID: 4396507235073994}
   fireOnAllSpawns: 1
+  burstFire:
+    salvoCount: 0
+    afterSalvoDelay: 3
   infiniteAmmo: 1
   ammoCount: 10
   rateOfFire: 3
---- !u!114 &114440011100837176
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1724298146902686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8761ef4164a51f1488791ac465c91a0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  currentHealth: 100
-  maxHealth: 100
-  damage: 10
-  lives: 1
-  weapon: {fileID: 0}
-  firingPorts: []
 --- !u!114 &114481155037557762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -562,3 +547,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f93eec1a9945049b261216f3e2f111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114631844229496110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724298146902686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4daed9ad39a9b3344af4d42d93c9c580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onContactEffect: {fileID: 0}
+  onDeathEffect: {fileID: 0}
+  moveSpeed: 5
+  damage: 10
+  invincible: 0
+  _currentHealth: 100
+  _maxHealth: 100

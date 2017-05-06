@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 4855825796629436}
   - component: {fileID: 54132630188453810}
   - component: {fileID: 114393985687534506}
-  - component: {fileID: 114368798451159220}
+  - component: {fileID: 114668773831077086}
   m_Layer: 0
   m_Name: GreenWing
   m_TagString: Untagged
@@ -458,7 +458,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1276776809747898}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.5, y: 0.8, z: 2}
@@ -470,7 +470,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1500265584214568}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.95, y: 0.8, z: 1}
@@ -482,7 +482,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1749977995415968}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.95, y: 0.8, z: 1}
@@ -494,7 +494,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1863660165890762}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.8, z: 1.5}
@@ -520,6 +520,9 @@ MonoBehaviour:
   - {fileID: 4976132236090706}
   - {fileID: 4269154994219240}
   fireOnAllSpawns: 1
+  burstFire:
+    salvoCount: 0
+    afterSalvoDelay: 3
   infiniteAmmo: 1
   ammoCount: 10
   rateOfFire: 1
@@ -534,24 +537,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eca5813dcbe5254d896c3b8e72d3d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114368798451159220
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1488515096912240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8761ef4164a51f1488791ac465c91a0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  currentHealth: 100
-  maxHealth: 100
-  damage: 10
-  lives: 1
-  weapon: {fileID: 0}
-  firingPorts: []
 --- !u!114 &114393985687534506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -565,3 +550,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zigzagFrequency: 3
   zigzagWaveHeight: 5
+--- !u!114 &114668773831077086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1488515096912240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4daed9ad39a9b3344af4d42d93c9c580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onContactEffect: {fileID: 0}
+  onDeathEffect: {fileID: 0}
+  moveSpeed: 5
+  damage: 10
+  invincible: 0
+  _currentHealth: 100
+  _maxHealth: 100
