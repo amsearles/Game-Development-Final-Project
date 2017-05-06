@@ -63,9 +63,13 @@ Work on trail - Anthony
 ---
 ##Due 05/06:
 
-To be determined.
+work on enemies/player and various projectiles - Jimmy
+work on trail powerup - Elric
+work on spawn patterns and level - Anthony
 
-###Scrum meeting notesficulty
+###Scrum meeting notes
+*realized we had more bugs
+* focused on finishing the bare basics so that we can polish stuff at a later time
 
 //TODO
 
