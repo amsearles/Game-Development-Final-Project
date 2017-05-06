@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class PlayerUnit : GameUnit
 {
+    // **** Variables ****
+    [SerializeField]
+    private int _lives = 3;
 
-    public int maxTrailSize = 10;
-
-    void Start ()
+    // **** Property ****
+    public int lives
     {
-		
-	}
+        get { return lives; }
+        set { lives = (value < 0) ? 0 : value; }
+    }
+
+    // *****************
+    // 
+    //  Private Methods
+    //
+    // *****************
 
     void OnMouseDrag ()
     {
@@ -21,11 +30,7 @@ public class PlayerUnit : GameUnit
         point.z = transform.position.z;
         transform.position = point;
     }
-
-	void Update ()
-    {
-
-	}
+    
 
 	void OnTriggerEnter2D(Collider2D other) 
 	{

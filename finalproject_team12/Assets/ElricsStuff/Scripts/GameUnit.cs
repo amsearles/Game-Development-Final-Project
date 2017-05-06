@@ -107,6 +107,11 @@ public class GameUnit : MonoBehaviour
     {
         if (other != null)
         {
+            /* 
+             * Set up all the IF tag = 'something' statements here
+             * for edge cases. The majority of the collisions are 
+             * determined via Layers.
+             */
             other.currentHealth -= damage;
         }
     }

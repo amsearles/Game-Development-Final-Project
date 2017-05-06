@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33955527503306484}
   - component: {fileID: 136880347225769664}
   - component: {fileID: 23299092195542662}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4565778752360300}
   - component: {fileID: 114222314262080320}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Player_Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,12 +121,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e2ccce703e72e4f8a9b9962f97161b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 100
-  maxHealth: 100
-  damage: 10
+  onContactEffect: {fileID: 0}
+  onDeathEffect: {fileID: 0}
   moveSpeed: 15
-  collisionEffect: {fileID: 0}
-  deathEffect: {fileID: 0}
+  damage: 10
+  invincible: 0
+  _currentHealth: 100
+  _maxHealth: 100
 --- !u!136 &136880347225769664
 CapsuleCollider:
   m_ObjectHideFlags: 1

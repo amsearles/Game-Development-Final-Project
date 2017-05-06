@@ -100,6 +100,7 @@
     <Compile Include="Assets\ElricsStuff\Scripts\PlayerUnit.cs" />
     <Compile Include="Assets\ElricsStuff\Scripts\PowerUp.cs" />
     <Compile Include="Assets\ElricsStuff\Scripts\TrailPowerUp.cs" />
+    <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\AI\Firing\AIFiringStraight.cs" />
     <Compile Include="Assets\Scripts\AI\Movement\AIMoveRotateAround.cs" />
     <Compile Include="Assets\Scripts\AI\Movement\AIMoveStraight.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="Assets\Scripts\GameUnits\EnemyUnit.cs" />
     <Compile Include="Assets\Scripts\GameUnits\GameUnitShip_OLD.cs" />
     <Compile Include="Assets\Scripts\Level\AbstractLevel.cs" />
+    <Compile Include="Assets\Scripts\Level\DestroyOnExit.cs" />
     <Compile Include="Assets\Scripts\Level\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Projectiles\ProjectileBullet.cs" />
     <Compile Include="Assets\Scripts\Projectiles\ProjectileMissile.cs" />

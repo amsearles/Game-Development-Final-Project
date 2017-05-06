@@ -82,6 +82,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4742187212248162}
   - component: {fileID: 65119871801609406}
+  - component: {fileID: 54389301719920292}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -113,6 +114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4950791961018592}
   - component: {fileID: 65312080284952568}
+  - component: {fileID: 54530400993742238}
   m_Layer: 0
   m_Name: Tip
   m_TagString: Untagged
@@ -129,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4611379653838978}
   - component: {fileID: 65250453960285168}
+  - component: {fileID: 54244608271154122}
   m_Layer: 0
   m_Name: LeftWing
   m_TagString: Untagged
@@ -195,6 +198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4337680417637318}
   - component: {fileID: 65492161230066796}
+  - component: {fileID: 54026317184924714}
   m_Layer: 0
   m_Name: RightWing
   m_TagString: Untagged
@@ -436,6 +440,66 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1244739512860282}
   m_Mesh: {fileID: 4300000, guid: 6c11e79470dad4b4bb66b279d2660007, type: 3}
+--- !u!54 &54026317184924714
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1949589862922578}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54244608271154122
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1665919961407452}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54389301719920292
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1456607918030752}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54530400993742238
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1661965219710376}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!54 &54998434180331658
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -522,7 +586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: GattlingBullets
-  projectile: {fileID: 114222314262080320, guid: 9adcf35b1bd90c8499b6cbcdf781a362,
+  projectile: {fileID: 114654335938847760, guid: a837498d6f575c84d83986c153fb7933,
     type: 2}
   projectileSpawnLocations:
   - {fileID: 4526397181064660}
