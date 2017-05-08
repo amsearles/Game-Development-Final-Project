@@ -2,21 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(GameUnit))]
+/**
+ * Jimmy He
+ * CSC631
+ * Team12
+ * Final Project
+ */
+
+[RequireComponent(typeof(MoveSpeedComponent))]
 public class AIMoveStraight : MonoBehaviour {
 
-    private GameUnit gameUnit;
+    // *****************
+    // 
+    //  Variables
+    //
+    // *****************
+
+    private MoveSpeedComponent moveSpeedComp;
+
+    // *****************
+    // 
+    //  Unity Methods
+    //
+    // *****************
 
     private void Start()
     {
-        gameUnit = GetComponent<GameUnit>();
+        moveSpeedComp = GetComponent<MoveSpeedComponent>();
     }
 
     private void FixedUpdate()
     {
         Transform transform = GetComponent<Transform>();
-        //transform.Translate(transform.forward * gameUnit.speed * Time.deltaTime);
-        transform.position += transform.forward * gameUnit.moveSpeed * Time.deltaTime;
+        //transform.Translate(transform.forward * moveSpeedComp.speed * Time.deltaTime);
+        transform.position += transform.forward * moveSpeedComp.speed * Time.deltaTime;
 
         //Rigidbody rigidbody = GetComponent<Rigidbody>();
         //rigidbody.MovePosition(transform.position + transform.forward * gameUnit.speed * Time.deltaTime);

@@ -9,8 +9,10 @@ using UnityEngine;
  * Final Project
  */
 
-public class ProjectileMissile : GameUnit
+[RequireComponent(typeof(RotateSpeedComponent))]
+public class ProjectileMissile : Projectile
 {
+    
     // *****************
     // 
     //  Variables
@@ -21,14 +23,19 @@ public class ProjectileMissile : GameUnit
     [Tooltip("Ignore this layer scaning for targets.")]
     public LayerMask targetedLayers;
 
-    [Tooltip("Speed of the rotation in degrees")]
-    public float rotateSpeed = 120f;
-
     [Tooltip("Provide values to turn this into a homing missile.")]
     public TrackingInfo trackingTargetInfo;
-    
+
     // Elapsed time of tracking duration.
     private float elapsedTime = 0.0f;
+
+    // *****************
+    // 
+    //  Properties
+    //
+    // *****************
+
+    public RotateSpeedComponent rotateSpeedComp { get; set; }
 
 
     // *****************
@@ -36,15 +43,10 @@ public class ProjectileMissile : GameUnit
     //  Private Methods
     //
     // *****************
-
-    private void MoveFoward()
-    {
-        transform.position += transform.forward * moveSpeed * Time.deltaTime;
-    }
-
+    
     private bool IsTargetInRange(GameUnit target)
     {
-        float degrees = Vector3.Angle(  transform.forward,
+        float degrees = Vector3.Angle(transform.forward,
                                         target.transform.position - transform.position);
 
         return (trackingTargetInfo.trackingAngle > degrees);
@@ -58,9 +60,9 @@ public class ProjectileMissile : GameUnit
     private void RotateToward(Vector3 position)
     {
         Quaternion direction = Quaternion.LookRotation(position - transform.position);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, direction, rotateSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, direction, rotateSpeedComp.speed * Time.deltaTime);
     }
-    
+
     // *****************
     // 
     //  Private Unity Methods
@@ -69,7 +71,8 @@ public class ProjectileMissile : GameUnit
 
     private void Start()
     {
-        rotateSpeed = Mathf.Abs(rotateSpeed);
+
+        rotateSpeedComp = GetComponent<RotateSpeedComponent>();
 
         if (trackingTargetInfo.trackedTarget != null)
         {
@@ -112,7 +115,8 @@ public class ProjectileMissile : GameUnit
 
         [Tooltip("Number of seconds to spend following a target.")]
         public float trackingDuration = 3f;
-        
+
+        // Uses OverlapBox, unsure if necessary. Keeping this here.
         //public bool IsTrackedTargetInRange(Transform trackingUnit)
         //{
         //    bool isInRange = false;

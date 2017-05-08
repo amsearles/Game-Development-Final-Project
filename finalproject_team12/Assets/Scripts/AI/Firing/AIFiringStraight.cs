@@ -2,6 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Jimmy He
+ * CSC631
+ * Team12
+ * Final Project
+ */
+
+/// <summary>
+/// Simply calls Weapon.Fire() constantly.
+/// The Weapon will handle on its own.
+/// </summary>
 [RequireComponent(typeof(Weapon))]
 public class AIFiringStraight : MonoBehaviour {
     

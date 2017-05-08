@@ -14,18 +14,21 @@ using UnityEngine;
 /// Weapon is used for spawning Projectile objects. Weapon handles the Projectile
 /// spawning locations, firing rate, and instantiation.
 /// </summary>
+
+[RequireComponent(typeof(AIFiringStraight))]    // Auto calls Weapon.Fire() every update.
+[DisallowMultipleComponent]
 public class Weapon : MonoBehaviour {
 
-    // -----------
+    // *****************
     //
-    // Variables
+    //  Variables
     //  
-    // -----------
-
+    // *****************
+    
     public string weaponName = "Weapon_Name";
 
     [Tooltip("Drag the GameObject with the Projectile component here.")]
-    public ProjectileBullet   projectile;
+    public Projectile   projectile;
 
     [Tooltip("Drag the GameObjects representing the spawn locations for the projectiles here.")]
     public List<Transform>  projectileSpawnLocations;
@@ -47,16 +50,34 @@ public class Weapon : MonoBehaviour {
 
     [Tooltip("The delay in seconds between firing projectiles.")]
     public float    rateOfFire = 3.0f;
+    
+    // ***** Private Variables *****
 
-    private float   nextFire = 0.0f;
-    private int     projSpawnLocationIndex;
+    private string _ownerTag;                   // Tag name of this Weapon's owner.
+    private float   nextFire = 0.0f;            // Track time of next available shot.
+    private int     projSpawnLocationIndex;     // Index to cycle each Weapon's Projectile Spawn Locations.
 
-
-    // -----------
+    // *****************
     //
-    // Public Methods
+    //  Property
     //  
-    // -----------
+    // *****************
+
+    /// <summary>
+    /// Return Tag of the object that fired this Weapon.
+    /// Used to pass to Projectile for collision checking.
+    /// </summary>
+    public string ownerTag
+    {
+        get { return transform.root.tag; }
+    }
+    
+
+    // *****************
+    //
+    //  Public Methods
+    //  
+    // *****************
 
     public List<Transform> GetProjectileSpawnLocations()
     {
@@ -85,11 +106,11 @@ public class Weapon : MonoBehaviour {
         }
     }
 
-    // -----------
+    // *****************
     //
-    // Private Unity Methods
+    //  Private Methods
     //  
-    // -----------
+    // *****************
 
     /// <summary>
     /// Helper method to <see cref="Fire()"/>. 
@@ -124,6 +145,7 @@ public class Weapon : MonoBehaviour {
     {
         Vector3 spawnPosition;
         Quaternion spawnRotation;
+        Projectile firedProjectile;
 
         // Spawn the projectile.
         if (fireOnAllSpawns)
@@ -133,7 +155,10 @@ public class Weapon : MonoBehaviour {
                 spawnPosition = x.position;
                 spawnRotation = x.rotation;
 
-                Instantiate(projectile, spawnPosition, spawnRotation);
+                firedProjectile = Instantiate(projectile, spawnPosition, spawnRotation);
+
+                // Set up the fired projectile's owner tag.
+                firedProjectile.ownerTag = transform.root.tag;
             }
         }
         else
@@ -144,15 +169,18 @@ public class Weapon : MonoBehaviour {
             // Increment / loop the index.
             projSpawnLocationIndex = (projSpawnLocationIndex + 1) % projectileSpawnLocations.Count;
 
-            Instantiate(projectile, spawnPosition, spawnRotation);
+            firedProjectile = Instantiate(projectile, spawnPosition, spawnRotation);
+
+            // Set up the fired projectile's owner tag.
+            firedProjectile.ownerTag = transform.root.tag;
         }
     }
 
-    // -----------
+    // *****************
     //
-    // Private Unity Methods
+    //  Unity Methods
     //  
-    // -----------
+    // *****************
 
     private void Start()
     {
@@ -161,15 +189,17 @@ public class Weapon : MonoBehaviour {
         if (burstFire.afterSalvoDelay < rateOfFire)
             burstFire.afterSalvoDelay = rateOfFire;
 
+
         nextFire = 0f;
         projSpawnLocationIndex = 0;
     }
 
-    // -----------
+
+    // *****************
     //
-    // Helper Class
+    //  Helper Class
     //  
-    // -----------
+    // *****************
 
     [Serializable]
     private class BurstFire

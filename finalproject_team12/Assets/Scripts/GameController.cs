@@ -35,8 +35,8 @@ public class GameController : MonoBehaviour {
 
         if (File.Exists(fullFileName))
         {
-            BinaryFormatter binaryFormatter = new BinaryFormatter();
-            FileStream fileStream = File.Open(fullFileName, FileMode.Open);
+            //BinaryFormatter binaryFormatter = new BinaryFormatter();
+            //FileStream fileStream = File.Open(fullFileName, FileMode.Open);
 
             //TODO: 
         }
@@ -77,7 +77,8 @@ public class GameController : MonoBehaviour {
 	}
 	public void UpdateScore()
 	{
-		scoreText.text = "Score: " + score;
+        if (scoreText != null )
+		    scoreText.text = "Score: " + score;
 	}
 
 }

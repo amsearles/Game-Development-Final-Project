@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33955527503306484}
   - component: {fileID: 136880347225769664}
   - component: {fileID: 23299092195542662}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,8 +37,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4565778752360300}
-  - component: {fileID: 114222314262080320}
-  m_Layer: 13
+  - component: {fileID: 114682076304836704}
+  - component: {fileID: 114564979153100424}
+  - component: {fileID: 114347743199790744}
+  - component: {fileID: 114718253374031560}
+  m_Layer: 0
   m_Name: Player_Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +113,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1067476888857610}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114222314262080320
+--- !u!114 &114347743199790744
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1244938165696264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b73f540ff0cb9f48b066776d06dd71c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
+--- !u!114 &114564979153100424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1244938165696264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f25abf2c639174e9bbd1658191f33b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 10
+--- !u!114 &114682076304836704
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -121,13 +148,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e2ccce703e72e4f8a9b9962f97161b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onContactEffect: {fileID: 0}
-  onDeathEffect: {fileID: 0}
-  moveSpeed: 15
-  damage: 10
-  invincible: 0
-  _currentHealth: 100
-  _maxHealth: 100
+--- !u!114 &114718253374031560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1244938165696264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb686981f57f50a4c9b7c8e9fb4301ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instantiateEffect: {fileID: 0}
 --- !u!136 &136880347225769664
 CapsuleCollider:
   m_ObjectHideFlags: 1

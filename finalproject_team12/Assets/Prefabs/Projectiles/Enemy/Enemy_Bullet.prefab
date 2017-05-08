@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33358047443154366}
   - component: {fileID: 136743449576035588}
   - component: {fileID: 23663271243605632}
-  m_Layer: 14
+  m_Layer: 11
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,8 +37,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4684264144303530}
-  - component: {fileID: 114654335938847760}
-  m_Layer: 14
+  - component: {fileID: 114371568134487224}
+  - component: {fileID: 114536604405658852}
+  - component: {fileID: 114883391401677072}
+  - component: {fileID: 114942921272074812}
+  m_Layer: 11
   m_Name: Enemy_Bullet
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -110,7 +113,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1061690994277958}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114654335938847760
+--- !u!114 &114371568134487224
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -121,13 +124,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e2ccce703e72e4f8a9b9962f97161b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onContactEffect: {fileID: 0}
-  onDeathEffect: {fileID: 0}
-  moveSpeed: 15
-  damage: 10
-  invincible: 0
-  _currentHealth: 100
-  _maxHealth: 100
+--- !u!114 &114536604405658852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1272126668371718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b73f540ff0cb9f48b066776d06dd71c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+--- !u!114 &114883391401677072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1272126668371718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f25abf2c639174e9bbd1658191f33b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 10
+--- !u!114 &114942921272074812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1272126668371718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb686981f57f50a4c9b7c8e9fb4301ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instantiateEffect: {fileID: 0}
 --- !u!136 &136743449576035588
 CapsuleCollider:
   m_ObjectHideFlags: 1

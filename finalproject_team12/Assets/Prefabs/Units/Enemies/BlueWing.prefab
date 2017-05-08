@@ -148,8 +148,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4770422378581410}
   - component: {fileID: 54998434180331658}
-  - component: {fileID: 114481155037557762}
-  - component: {fileID: 114631844229496110}
+  - component: {fileID: 114729338658138422}
+  - component: {fileID: 114274009162499060}
+  - component: {fileID: 114859114761151638}
+  - component: {fileID: 114010623173462798}
+  - component: {fileID: 114944008547685300}
+  - component: {fileID: 114214743697671104}
   m_Layer: 0
   m_Name: BlueWing
   m_TagString: Untagged
@@ -563,6 +567,41 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.95, y: 0.8, z: 1.4999999}
   m_Center: {x: 1.23, y: -0.2, z: -1}
+--- !u!114 &114010623173462798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724298146902686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f25abf2c639174e9bbd1658191f33b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 10
+--- !u!114 &114214743697671104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724298146902686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb686981f57f50a4c9b7c8e9fb4301ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instantiateEffect: {fileID: 0}
+--- !u!114 &114274009162499060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724298146902686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f93eec1a9945049b261216f3e2f111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114386176802199876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -586,7 +625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: GattlingBullets
-  projectile: {fileID: 114654335938847760, guid: a837498d6f575c84d83986c153fb7933,
+  projectile: {fileID: 114371568134487224, guid: a837498d6f575c84d83986c153fb7933,
     type: 2}
   projectileSpawnLocations:
   - {fileID: 4526397181064660}
@@ -600,7 +639,7 @@ MonoBehaviour:
   infiniteAmmo: 1
   ammoCount: 10
   rateOfFire: 3
---- !u!114 &114481155037557762
+--- !u!114 &114729338658138422
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -608,10 +647,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1724298146902686}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6f93eec1a9945049b261216f3e2f111, type: 3}
+  m_Script: {fileID: 11500000, guid: 42e8654635617b44b819114a61f0e4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114631844229496110
+--- !u!114 &114859114761151638
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -619,13 +658,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1724298146902686}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4daed9ad39a9b3344af4d42d93c9c580, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b73f540ff0cb9f48b066776d06dd71c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onContactEffect: {fileID: 0}
-  onDeathEffect: {fileID: 0}
-  moveSpeed: 5
-  damage: 10
+  speed: 5
+--- !u!114 &114944008547685300
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724298146902686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6303182424cf1334b8bc21fe78033196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   invincible: 0
   _currentHealth: 100
   _maxHealth: 100

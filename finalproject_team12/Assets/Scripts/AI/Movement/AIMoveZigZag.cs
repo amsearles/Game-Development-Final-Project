@@ -2,21 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(GameUnit))]
+/**
+ * Jimmy He
+ * CSC631
+ * Team12
+ * Final Project
+ */
+
+[RequireComponent(typeof(MoveSpeedComponent))]
 public class AIMoveZigZag : MonoBehaviour {
+
+    // *****************
+    // 
+    //  Variables
+    //
+    // *****************
 
     [Tooltip("The speed of moving left and right.\n" +
                 "That is, the value going between 0 and the given wave height.")]
     public float zigzagFrequency = 3f;
+
     [Tooltip("The distance of moving to either left or right followed by the same distance in the opposite direction.\n" +
                 "That is, the value of which frequency must reach before moving in the opposite direction")]
     public float zigzagWaveHeight = 5f;
 
-    private GameUnit gameUnit;
+    private MoveSpeedComponent moveSpeedComp;
 
-	// Use this for initialization
-	void Start () {
-        gameUnit = GetComponent<GameUnit>();
+
+    // *****************
+    // 
+    //  Unity Methods
+    //
+    // *****************
+
+    // Use this for initialization
+    void Start () {
+        moveSpeedComp = GetComponent<MoveSpeedComponent>();
 
         zigzagWaveHeight = Mathf.Abs(zigzagWaveHeight);
 	}
@@ -32,7 +53,7 @@ public class AIMoveZigZag : MonoBehaviour {
         transform.position += transform.right * pingpong * Time.deltaTime;
 
         // Move the object via its Forward direction axis.
-        transform.position += transform.forward * gameUnit.moveSpeed * Time.deltaTime;
+        transform.position += transform.forward * moveSpeedComp.speed * Time.deltaTime;
 
         //Rigidbody rigidbody = GetComponent<Rigidbody>();
         //rigidbody.MovePosition(transform.position + transform.right * pingpong * Time.deltaTime);

@@ -2,21 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileBullet : GameUnit {
+/**
+ * Jimmy He
+ * CSC631
+ * Team12
+ * Final Project
+ */
+
+public class ProjectileBullet : Projectile
+{
+
+    // *****************
+    // 
+    //  Unity Methods
+    //
+    // *****************
     
     private void FixedUpdate()
     {
         MoveFoward();
     }
     
-    public void MoveFoward()
+    private void OnTriggerEnter(Collider other)
     {
-        Rigidbody rigidbody = GetComponent<Rigidbody>();
+        if (ownerTag.Equals(Tags.Player))
+        {
+            if (other.CompareTag(Tags.Enemy))
+            {
+                
+            }
+        }
+        else if (ownerTag.Equals(Tags.Enemy))
+        {
 
-        if (rigidbody != null)
-            rigidbody.velocity = transform.forward * moveSpeed * Time.deltaTime;
+        }
         else
-            transform.position += transform.forward * moveSpeed * Time.deltaTime;
+        {
+            throw new System.Exception("This Projectile requires a ownerTag name");
+        }
     }
-    
+
 }

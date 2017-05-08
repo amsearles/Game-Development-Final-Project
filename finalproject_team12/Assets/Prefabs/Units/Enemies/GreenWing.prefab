@@ -111,8 +111,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4855825796629436}
   - component: {fileID: 54132630188453810}
+  - component: {fileID: 114996797194758220}
   - component: {fileID: 114393985687534506}
-  - component: {fileID: 114668773831077086}
+  - component: {fileID: 114501924268437560}
+  - component: {fileID: 114976978123835242}
+  - component: {fileID: 114074885909994148}
+  - component: {fileID: 114603261003296028}
   m_Layer: 0
   m_Name: GreenWing
   m_TagString: Untagged
@@ -511,7 +515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Weapon_Name
-  projectile: {fileID: 114222314262080320, guid: 9adcf35b1bd90c8499b6cbcdf781a362,
+  projectile: {fileID: 114371568134487224, guid: a837498d6f575c84d83986c153fb7933,
     type: 2}
   projectileSpawnLocations:
   - {fileID: 4956240768858390}
@@ -526,6 +530,20 @@ MonoBehaviour:
   infiniteAmmo: 1
   ammoCount: 10
   rateOfFire: 1
+--- !u!114 &114074885909994148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1488515096912240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6303182424cf1334b8bc21fe78033196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invincible: 0
+  _currentHealth: 100
+  _maxHealth: 100
 --- !u!114 &114191408241336308
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -550,7 +568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zigzagFrequency: 3
   zigzagWaveHeight: 5
---- !u!114 &114668773831077086
+--- !u!114 &114501924268437560
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -558,13 +576,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 1488515096912240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4daed9ad39a9b3344af4d42d93c9c580, type: 3}
+  m_Script: {fileID: 11500000, guid: c7f25abf2c639174e9bbd1658191f33b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onContactEffect: {fileID: 0}
-  onDeathEffect: {fileID: 0}
-  moveSpeed: 5
-  damage: 10
-  invincible: 0
-  _currentHealth: 100
-  _maxHealth: 100
+  _damage: 10
+--- !u!114 &114603261003296028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1488515096912240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb686981f57f50a4c9b7c8e9fb4301ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instantiateEffect: {fileID: 0}
+--- !u!114 &114976978123835242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1488515096912240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b73f540ff0cb9f48b066776d06dd71c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+--- !u!114 &114996797194758220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1488515096912240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e8654635617b44b819114a61f0e4c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
