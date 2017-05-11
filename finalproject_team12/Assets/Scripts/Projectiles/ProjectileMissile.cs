@@ -12,20 +12,21 @@ using UnityEngine;
 [RequireComponent(typeof(RotateSpeedComponent))]
 public class ProjectileMissile : Projectile
 {
-    
+    // TODO : This goes in WeaponMissileLauncher
+    //[Tooltip("Ignore this layer scaning for targets.")]
+    //public LayerMask targetedLayers;
+
     // *****************
     // 
     //  Variables
     //
     // *****************
-
-    // TODO : This goes in WeaponMissileLauncher
-    [Tooltip("Ignore this layer scaning for targets.")]
-    public LayerMask targetedLayers;
-
+    
     [Tooltip("Provide values to turn this into a homing missile.")]
     public TrackingInfo trackingTargetInfo;
-
+    // **** Private Variables ****
+    // Speed of rotation when tracking a target.
+    private RotateSpeedComponent _rotateSpeedComponent;
     // Elapsed time of tracking duration.
     private float elapsedTime = 0.0f;
 
@@ -35,7 +36,15 @@ public class ProjectileMissile : Projectile
     //
     // *****************
 
-    public RotateSpeedComponent rotateSpeedComp { get; set; }
+    public RotateSpeedComponent rotateSpeedComp
+    {
+        get
+        {
+            if (_rotateSpeedComponent == null)
+                _rotateSpeedComponent = GetComponent<RotateSpeedComponent>();
+            return _rotateSpeedComponent;
+        }
+    }
 
 
     // *****************
@@ -71,9 +80,6 @@ public class ProjectileMissile : Projectile
 
     private void Start()
     {
-
-        rotateSpeedComp = GetComponent<RotateSpeedComponent>();
-
         if (trackingTargetInfo.trackedTarget != null)
         {
             trackingTargetInfo.trackingAngle = Mathf.Abs(trackingTargetInfo.trackingAngle);
@@ -97,7 +103,7 @@ public class ProjectileMissile : Projectile
 
         elapsedTime += Time.deltaTime;
     }
-
+    
 
     // *****************
     // 
@@ -105,6 +111,7 @@ public class ProjectileMissile : Projectile
     //
     // *****************
 
+    [System.Serializable]
     public class TrackingInfo
     {
         [Tooltip("Target to follow. This turns this projectile into a homing missile.")]

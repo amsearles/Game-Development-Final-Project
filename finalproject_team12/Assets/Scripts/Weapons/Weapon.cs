@@ -52,26 +52,14 @@ public class Weapon : MonoBehaviour {
     public float    rateOfFire = 3.0f;
     
     // ***** Private Variables *****
-
-    private string _ownerTag;                   // Tag name of this Weapon's owner.
-    private float   nextFire = 0.0f;            // Track time of next available shot.
-    private int     projSpawnLocationIndex;     // Index to cycle each Weapon's Projectile Spawn Locations.
-
-    // *****************
-    //
-    //  Property
-    //  
-    // *****************
-
-    /// <summary>
-    /// Return Tag of the object that fired this Weapon.
-    /// Used to pass to Projectile for collision checking.
-    /// </summary>
-    public string ownerTag
-    {
-        get { return transform.root.tag; }
-    }
     
+    private float   nextFire = 0.0f;            // Next time of next available shot.
+    private Vector3 prevPosition;               // Used to calculate deltaSpeed to add to Projectile.
+    private float   deltaSpeed = 0.0f;          // Amount to add to Projectile speed upon firing.
+    private int     projSpawnLocationIndex;     // Index to cycle each Weapon's Projectile Spawn Locations.
+    
+    
+
 
     // *****************
     //
@@ -106,6 +94,8 @@ public class Weapon : MonoBehaviour {
         }
     }
 
+
+
     // *****************
     //
     //  Private Methods
@@ -122,14 +112,12 @@ public class Weapon : MonoBehaviour {
         // Determine whether to set next time of firing by burst fire delay or by rate of fire.
         if (burstFire.salvoCount > 0)
         {
-
             burstFire.currentSalvoCount++;
 
             if (burstFire.currentSalvoCount == 0)
                 nextFire = burstFire.afterSalvoDelay + Time.time;
             else
                 nextFire = rateOfFire + Time.time;
-
         }
         else
         {
@@ -148,7 +136,7 @@ public class Weapon : MonoBehaviour {
         Projectile firedProjectile;
 
         // Spawn the projectile.
-        if (fireOnAllSpawns)
+        if (fireOnAllSpawns)    // Fire one Projectile per spawn location all at once.
         {
             foreach (Transform x in projectileSpawnLocations)
             {
@@ -159,9 +147,12 @@ public class Weapon : MonoBehaviour {
 
                 // Set up the fired projectile's owner tag.
                 firedProjectile.ownerTag = transform.root.tag;
+                
+                // Add additional speed based on the change in motion of this Weapon.
+                firedProjectile.moveSpeedComponent.speed += deltaSpeed;
             }
         }
-        else
+        else // Fire one Projectile at a time while cycling through each spawn location.
         {
             spawnPosition = projectileSpawnLocations[projSpawnLocationIndex].position;
             spawnRotation = projectileSpawnLocations[projSpawnLocationIndex].rotation;
@@ -173,8 +164,33 @@ public class Weapon : MonoBehaviour {
 
             // Set up the fired projectile's owner tag.
             firedProjectile.ownerTag = transform.root.tag;
+            
+            // Add additional speed based on the change in motion of this Weapon.
+            firedProjectile.moveSpeedComponent.speed += deltaSpeed;
         }
     }
+    
+    /// <summary>
+    /// Determine speed to add to Projectile based on the rate of changing positions of this Weapon.
+    /// <strong>NOTE: This is using the Z axis of the forward Vector of the Weapon to determine the speed adjustment.</strong>
+    /// </summary>
+    private void HandleAddSpeedToProjectileBasedOnChangeZ()
+    {
+        // deltaSpeed is a global variable; 
+        // Determine speed by differering changing positions over time.
+        deltaSpeed = ((transform.position - prevPosition) / Time.deltaTime).z;
+
+        // Only increase projectile speeds if Weapon is moving transform.forward. Never decrease.
+        if ((deltaSpeed * transform.forward.z) < 0)
+            deltaSpeed = 0.0f;
+        
+
+        // Reset previous Weapon's position to current position.
+        prevPosition.x = transform.position.x;
+        prevPosition.y = transform.position.y;
+        prevPosition.z = transform.position.z;
+    }
+
 
     // *****************
     //
@@ -191,7 +207,14 @@ public class Weapon : MonoBehaviour {
 
 
         nextFire = 0f;
+        deltaSpeed = 0f;
         projSpawnLocationIndex = 0;
+        prevPosition = new Vector3();
+    }
+
+    private void FixedUpdate()
+    {
+        HandleAddSpeedToProjectileBasedOnChangeZ();
     }
 
 

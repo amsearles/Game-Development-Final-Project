@@ -20,11 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4680731242108298}
   - component: {fileID: 33358047443154366}
-  - component: {fileID: 136743449576035588}
   - component: {fileID: 23663271243605632}
   m_Layer: 11
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +39,7 @@ GameObject:
   - component: {fileID: 114371568134487224}
   - component: {fileID: 114536604405658852}
   - component: {fileID: 114883391401677072}
-  - component: {fileID: 114942921272074812}
+  - component: {fileID: 136792097785968032}
   m_Layer: 11
   m_Name: Enemy_Bullet
   m_TagString: Enemy
@@ -124,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e2ccce703e72e4f8a9b9962f97161b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onDestructionEffect: {fileID: 0}
 --- !u!114 &114536604405658852
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,28 +148,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 10
---- !u!114 &114942921272074812
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1272126668371718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb686981f57f50a4c9b7c8e9fb4301ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instantiateEffect: {fileID: 0}
---- !u!136 &136743449576035588
+--- !u!136 &136792097785968032
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1061690994277958}
+  m_GameObject: {fileID: 1272126668371718}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
-  m_Direction: 1
+  m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}

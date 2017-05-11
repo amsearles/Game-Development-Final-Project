@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4861314116543010}
   m_Layer: 0
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 65188534296448216}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,10 +116,9 @@ GameObject:
   - component: {fileID: 114501924268437560}
   - component: {fileID: 114976978123835242}
   - component: {fileID: 114074885909994148}
-  - component: {fileID: 114603261003296028}
   m_Layer: 0
   m_Name: GreenWing
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,7 +134,7 @@ GameObject:
   - component: {fileID: 65591188072405884}
   m_Layer: 0
   m_Name: RightWing
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,7 +151,7 @@ GameObject:
   - component: {fileID: 23295678950158366}
   m_Layer: 0
   m_Name: Mesh
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,7 +167,7 @@ GameObject:
   - component: {fileID: 65626625909961472}
   m_Layer: 0
   m_Name: LeftWing
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -216,7 +215,7 @@ GameObject:
   - component: {fileID: 65949499716462644}
   m_Layer: 0
   m_Name: Tip
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -453,7 +452,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 52
   m_CollisionDetection: 0
 --- !u!65 &65188534296448216
 BoxCollider:
@@ -580,18 +579,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 10
---- !u!114 &114603261003296028
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1488515096912240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb686981f57f50a4c9b7c8e9fb4301ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  instantiateEffect: {fileID: 0}
 --- !u!114 &114976978123835242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -615,3 +602,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e8654635617b44b819114a61f0e4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onDestructionEffect: {fileID: 0}

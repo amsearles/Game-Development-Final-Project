@@ -11,35 +11,16 @@ using UnityEngine;
 
 public class ProjectileBullet : Projectile
 {
-
+    
     // *****************
     // 
     //  Unity Methods
     //
     // *****************
-    
+
     private void FixedUpdate()
     {
         MoveFoward();
     }
     
-    private void OnTriggerEnter(Collider other)
-    {
-        if (ownerTag.Equals(Tags.Player))
-        {
-            if (other.CompareTag(Tags.Enemy))
-            {
-                
-            }
-        }
-        else if (ownerTag.Equals(Tags.Enemy))
-        {
-
-        }
-        else
-        {
-            throw new System.Exception("This Projectile requires a ownerTag name");
-        }
-    }
-
 }

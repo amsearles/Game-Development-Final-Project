@@ -83,6 +83,10 @@
   <ItemGroup>
     <Compile Include="Assets\Anthony&apos;s Stuff\Asteroid.cs" />
     <Compile Include="Assets\Anthony&apos;s Stuff\BossScript.cs" />
+    <Compile Include="Assets\Anthony&apos;s Stuff\Space Shooter Mobile\Data\BackgroundController.cs" />
+    <Compile Include="Assets\Anthony&apos;s Stuff\Space Shooter Mobile\Data\HeroProjectile.cs" />
+    <Compile Include="Assets\Anthony&apos;s Stuff\Space Shooter Mobile\Data\UIController.cs" />
+    <Compile Include="Assets\Anthony&apos;s Stuff\Space Shooter Mobile\Prefabs\Backgrounds\backgroundScript.cs" />
     <Compile Include="Assets\Anthony&apos;s Stuff\SpawnController.cs" />
     <Compile Include="Assets\Anthony&apos;s Stuff\TrailRendererWith2DCollider.cs" />
     <Compile Include="Assets\Anthony&apos;s Stuff\_Completed-Assets\Scripts\Done_BGScroller.cs" />

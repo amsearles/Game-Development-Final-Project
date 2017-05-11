@@ -19,9 +19,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4274124580606690}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Effects
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,9 +34,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4565006479187350}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mesh
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,9 +52,9 @@ GameObject:
   - component: {fileID: 198765655487089784}
   - component: {fileID: 199286083019608460}
   - component: {fileID: 123243306032066170}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: fire
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,9 +68,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4108011612344258}
   - component: {fileID: 54276229726561120}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy_HomingMissile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,9 +84,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4843202748868614}
   - component: {fileID: 136161411056431056}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,9 +101,9 @@ GameObject:
   - component: {fileID: 4486676730929848}
   - component: {fileID: 198922717096186132}
   - component: {fileID: 199609167337085516}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: smoke
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,9 +118,9 @@ GameObject:
   - component: {fileID: 4283747585774452}
   - component: {fileID: 33326010098345392}
   - component: {fileID: 23867755125872208}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: missile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,7 +273,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 20
   m_CollisionDetection: 0
 --- !u!123 &123243306032066170
 LensFlare:
@@ -2995,7 +2995,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 989937979
+  randomSeed: 11306155
   InitialModule:
     serializedVersion: 3
     enabled: 1

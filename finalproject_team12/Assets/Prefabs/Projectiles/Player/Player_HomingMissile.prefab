@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4031530799524192}
   - component: {fileID: 33079642691520858}
   - component: {fileID: 23187454795997336}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: missile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,25 +36,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4292580735314864}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mesh
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1424222674144236
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4663616524150306}
-  - component: {fileID: 136778331150979156}
-  m_Layer: 0
-  m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,9 +53,9 @@ GameObject:
   - component: {fileID: 4772851777360804}
   - component: {fileID: 198267446221119662}
   - component: {fileID: 199290086677141012}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: smoke
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,9 +68,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4513758109804384}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Effects
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,9 +86,9 @@ GameObject:
   - component: {fileID: 198888856733122960}
   - component: {fileID: 199854048764178608}
   - component: {fileID: 123914815782914236}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: fire
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,9 +102,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4053462384910480}
   - component: {fileID: 54767750447989726}
-  m_Layer: 0
+  - component: {fileID: 114671491190470242}
+  - component: {fileID: 114945650326638172}
+  - component: {fileID: 114747727496195586}
+  - component: {fileID: 114135213037608906}
+  - component: {fileID: 136954294034594394}
+  m_Layer: 11
   m_Name: Player_HomingMissile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +138,6 @@ Transform:
   m_LocalScale: {x: 0.025, y: 0.025, z: 0.025}
   m_Children:
   - {fileID: 4292580735314864}
-  - {fileID: 4663616524150306}
   - {fileID: 4513758109804384}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -193,19 +181,6 @@ Transform:
   m_Children:
   - {fileID: 4496329632945980}
   - {fileID: 4772851777360804}
-  m_Father: {fileID: 4053462384910480}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4663616524150306
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1424222674144236}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
   m_Father: {fileID: 4053462384910480}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -273,8 +248,60 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 20
   m_CollisionDetection: 0
+--- !u!114 &114135213037608906
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1994856709523466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d300313daa8a0e84e883cd6d2c47f85f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDestructionEffect: {fileID: 0}
+  trackingTargetInfo:
+    trackedTarget: {fileID: 0}
+    trackingAngle: 45
+    trackingDuration: 3
+--- !u!114 &114671491190470242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1994856709523466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40640f13b08104b4aad6fbb4afc0c780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 120
+--- !u!114 &114747727496195586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1994856709523466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b73f540ff0cb9f48b066776d06dd71c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1500
+--- !u!114 &114945650326638172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1994856709523466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f25abf2c639174e9bbd1658191f33b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 50
 --- !u!123 &123914815782914236
 LensFlare:
   m_ObjectHideFlags: 1
@@ -290,12 +317,12 @@ LensFlare:
     serializedVersion: 2
     m_Bits: 6
   m_Directional: 0
---- !u!136 &136778331150979156
+--- !u!136 &136954294034594394
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1424222674144236}
+  m_GameObject: {fileID: 1994856709523466}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -358,7 +385,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 612366178
+  randomSeed: 416076342
   InitialModule:
     serializedVersion: 3
     enabled: 1

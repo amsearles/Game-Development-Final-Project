@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4606731863237962}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Effects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 198982023595279018}
   - component: {fileID: 199379662519577188}
   - component: {fileID: 123754531139716040}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4586124304407422}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4436866287638724}
   - component: {fileID: 54143011474414492}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy_StraightMissile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 4323972887663184}
   - component: {fileID: 198882152392973728}
   - component: {fileID: 199524790830132834}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 4304460469970720}
   - component: {fileID: 33259469293898182}
   - component: {fileID: 23486289517034132}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: missile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4928750778432964}
   - component: {fileID: 136810898647237946}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +273,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 20
   m_CollisionDetection: 0
 --- !u!123 &123754531139716040
 LensFlare:
