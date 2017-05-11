@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4861314116543010}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Colliders
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4893966199205296}
   - component: {fileID: 65188534296448216}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 114501924268437560}
   - component: {fileID: 114976978123835242}
   - component: {fileID: 114074885909994148}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GreenWing
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4827883455377326}
   - component: {fileID: 65591188072405884}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightWing
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 4621371448500796}
   - component: {fileID: 33262580992909382}
   - component: {fileID: 23295678950158366}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mesh
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4425715162341326}
   - component: {fileID: 65626625909961472}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftWing
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 114191408241336308}
   - component: {fileID: 114009753760134346}
   m_Layer: 0
-  m_Name: WeaponPlacement
+  m_Name: Weapon_GreenWing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,7 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4542336543438672}
   - component: {fileID: 65949499716462644}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tip
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -317,7 +317,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1488515096912240}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -518,17 +518,14 @@ MonoBehaviour:
     type: 2}
   projectileSpawnLocations:
   - {fileID: 4956240768858390}
-  - {fileID: 4956240768858390}
   - {fileID: 4101352460619164}
-  - {fileID: 4976132236090706}
-  - {fileID: 4269154994219240}
   fireOnAllSpawns: 1
   burstFire:
     salvoCount: 0
     afterSalvoDelay: 3
   infiniteAmmo: 1
   ammoCount: 10
-  rateOfFire: 1
+  rateOfFire: 4
 --- !u!114 &114074885909994148
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -541,8 +538,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invincible: 0
-  _currentHealth: 100
-  _maxHealth: 100
+  _currentHealth: 50
+  _maxHealth: 50
 --- !u!114 &114191408241336308
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -602,4 +599,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e8654635617b44b819114a61f0e4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onDestructionEffect: {fileID: 0}
+  onDestructionEffect: {fileID: 1054495152579494, guid: 1b54a09c837501d4da17e611062341bb,
+    type: 2}

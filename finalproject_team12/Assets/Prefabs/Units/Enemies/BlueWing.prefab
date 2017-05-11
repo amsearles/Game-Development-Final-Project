@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4994063534587968}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PortTip_Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 4312860951963502}
   - component: {fileID: 33071473624195054}
   - component: {fileID: 23523734481445000}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mesh
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4526397181064660}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PortLeft_SmallGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4299046306569362}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PortLeft_SmallGun2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4742187212248162}
   - component: {fileID: 65119871801609406}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4882313668322830}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PortRight_SmallGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4950791961018592}
   - component: {fileID: 65312080284952568}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tip
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4611379653838978}
   - component: {fileID: 65250453960285168}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftWing
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 114859114761151638}
   - component: {fileID: 114010623173462798}
   - component: {fileID: 114944008547685300}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BlueWing
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -167,8 +167,8 @@ GameObject:
   - component: {fileID: 4593672918949216}
   - component: {fileID: 114399281586681060}
   - component: {fileID: 114386176802199876}
-  m_Layer: 0
-  m_Name: Weapon_GattlingBullets
+  m_Layer: 10
+  m_Name: Weapon_BlueWing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +182,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4143179565779058}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Colliders
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4337680417637318}
   - component: {fileID: 65492161230066796}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightWing
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -213,7 +213,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4396507235073994}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PortRight_SmallGun2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,10 +551,7 @@ MonoBehaviour:
   projectile: {fileID: 114371568134487224, guid: a837498d6f575c84d83986c153fb7933,
     type: 2}
   projectileSpawnLocations:
-  - {fileID: 4526397181064660}
-  - {fileID: 4299046306569362}
-  - {fileID: 4882313668322830}
-  - {fileID: 4396507235073994}
+  - {fileID: 4994063534587968}
   fireOnAllSpawns: 1
   burstFire:
     salvoCount: 0
@@ -573,7 +570,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42e8654635617b44b819114a61f0e4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onDestructionEffect: {fileID: 0}
+  onDestructionEffect: {fileID: 1054495152579494, guid: 1b54a09c837501d4da17e611062341bb,
+    type: 2}
 --- !u!114 &114859114761151638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -599,4 +597,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invincible: 0
   _currentHealth: 10
-  _maxHealth: 100
+  _maxHealth: 10

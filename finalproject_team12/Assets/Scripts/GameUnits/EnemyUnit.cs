@@ -12,20 +12,27 @@ public class EnemyUnit : GameUnit {
     //
     // *****************
 
-    /// <summary>Handler method for dealing with trigger/collisions between Player and Enemy.</summary>
+    /// <summary>
+    /// Handler method for dealing with trigger/collisions between Player and Enemy.
+    /// Enemy and Player collisions are both dealt here.
+    /// </summary>
     /// <param name="other">Object struck on impact.</param>
     private void OnContactEnter(GameObject other)
     {
         if (other.CompareTag(Tags.Player))  // Target Player directly.
         {
-            PlayerUnit player = other.GetComponent<PlayerUnit>();
+            PlayerUnit player = other.GetComponentInChildren<PlayerUnit>();
             if (player != null)
             {
-                player.TakeDamage(damageComponent.damage);
+                // Damage dealt is the amount of health remaining on this Game Unit.
+                int playerCurrentHealth = player.healthComponent.currentHealth;
+
+                player.TakeDamage(healthComponent.currentHealth);
+                this.TakeDamage(playerCurrentHealth);
             }
         }
     }
-
+    
     // *****************
     // 
     //  Unity Methods
@@ -34,12 +41,12 @@ public class EnemyUnit : GameUnit {
 
     private void OnCollisionEnter(Collision collision)
     {
-        OnContactEnter(collision.gameObject);
+        OnContactEnter(collision.transform.root.gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        OnContactEnter(other.gameObject);
+        OnContactEnter(other.transform.root.gameObject);
     }
 
 }

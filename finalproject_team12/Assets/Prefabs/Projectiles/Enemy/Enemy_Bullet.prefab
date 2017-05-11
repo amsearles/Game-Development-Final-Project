@@ -123,7 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e2ccce703e72e4f8a9b9962f97161b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onDestructionEffect: {fileID: 0}
+  onDestructionEffect: {fileID: 1892133498490992, guid: 4815ce9feb996404d9c86aa8bc224ec8,
+    type: 2}
 --- !u!114 &114536604405658852
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b73f540ff0cb9f48b066776d06dd71c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 50
 --- !u!114 &114883391401677072
 MonoBehaviour:
   m_ObjectHideFlags: 1

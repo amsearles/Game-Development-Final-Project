@@ -183,7 +183,9 @@ public class Weapon : MonoBehaviour {
         // Only increase projectile speeds if Weapon is moving transform.forward. Never decrease.
         if ((deltaSpeed * transform.forward.z) < 0)
             deltaSpeed = 0.0f;
-        
+
+        // Delta speed is negative if plane is heading toward (0,0,0). Make it positive.
+        deltaSpeed = Mathf.Abs(deltaSpeed);
 
         // Reset previous Weapon's position to current position.
         prevPosition.x = transform.position.x;

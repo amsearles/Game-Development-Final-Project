@@ -81,6 +81,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="finalproject_team12.Plugins.csproj">
+      <Project>{8EF1C0F0-DD1B-54D8-601E-07C3D9129975}</Project>
+      <Name>finalproject_team12.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Anthony&apos;s Stuff\Asteroid.cs" />
     <Compile Include="Assets\Anthony&apos;s Stuff\BossScript.cs" />
     <Compile Include="Assets\Anthony&apos;s Stuff\Space Shooter Mobile\Data\BackgroundController.cs" />
@@ -99,12 +105,26 @@
     <Compile Include="Assets\Anthony&apos;s Stuff\_Completed-Assets\Scripts\Done_PlayerController.cs" />
     <Compile Include="Assets\Anthony&apos;s Stuff\_Completed-Assets\Scripts\Done_RandomRotator.cs" />
     <Compile Include="Assets\Anthony&apos;s Stuff\_Completed-Assets\Scripts\Done_WeaponController.cs" />
+    <Compile Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\DemoSources\ExplosionDemoGUI.cs" />
+    <Compile Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\DemoSources\ExplosionDemoReactivator.cs" />
+    <Compile Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\DemoSources\ExplosionPlatformActivator.cs" />
+    <Compile Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\DemoSources\ExplosionsFPS.cs" />
+    <Compile Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\Scripts\ExplosionsBillboard.cs" />
+    <Compile Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\Scripts\ExplosionsDeactivateRendererByTime.cs" />
+    <Compile Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\Scripts\ExplosionsLightCurves.cs" />
+    <Compile Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\Scripts\ExplosionsParticleSystemScaler.cs" />
+    <Compile Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\Scripts\ExplosionsScaleCurves.cs" />
+    <Compile Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\Scripts\ExplosionsShaderColorGradient.cs" />
+    <Compile Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\Scripts\ExplosionsShaderFloatCurves.cs" />
+    <Compile Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\Scripts\ExplosionsShaderQueue.cs" />
+    <Compile Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\Scripts\ExplosionsSpriteSheetAnimation.cs" />
     <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\AI\Firing\AIFiringStraight.cs" />
     <Compile Include="Assets\Scripts\AI\Movement\AIMoveRotateAround.cs" />
     <Compile Include="Assets\Scripts\AI\Movement\AIMoveStraight.cs" />
     <Compile Include="Assets\Scripts\AI\Movement\AIMoveZigZag.cs" />
     <Compile Include="Assets\Scripts\Components\DamageComponent.cs" />
+    <Compile Include="Assets\Scripts\Components\DestroySelfByTime.cs" />
     <Compile Include="Assets\Scripts\Components\HealthComponent.cs" />
     <Compile Include="Assets\Scripts\Components\MoveSpeedComponent.cs" />
     <Compile Include="Assets\Scripts\Components\OnContactEffectComponent.cs" />
@@ -134,7 +154,29 @@
     <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Imports\Audio\Universal Sound FX\#Game Genre References\8bit and Retro.txt" />
+    <None Include="Assets\Imports\Audio\Universal Sound FX\#Game Genre References\Fighting.txt" />
+    <None Include="Assets\Imports\Audio\Universal Sound FX\#Game Genre References\First Person Shooter (FPS).txt" />
+    <None Include="Assets\Imports\Audio\Universal Sound FX\#Game Genre References\Physics.txt" />
+    <None Include="Assets\Imports\Audio\Universal Sound FX\#Game Genre References\Platform.txt" />
+    <None Include="Assets\Imports\Audio\Universal Sound FX\#Game Genre References\Puzzle.txt" />
+    <None Include="Assets\Imports\Audio\Universal Sound FX\#Game Genre References\Real Time Stategy (RTS) Medieval.txt" />
+    <None Include="Assets\Imports\Audio\Universal Sound FX\#Game Genre References\Real Time Stategy (RTS) Sci-Fi.txt" />
+    <None Include="Assets\Imports\Audio\Universal Sound FX\#Game Genre References\Shoot em Up.txt" />
+    <None Include="Assets\Imports\Audio\Universal Sound FX\version_history.txt" />
+    <None Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\Readme.txt" />
+    <None Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\Shaders\ExplosionsDistortionCullBack.shader" />
+    <None Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\Shaders\ExplosionsDistortionParticlesCutout.shader" />
+    <None Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\Shaders\ExplosionsGlowAdditive.shader" />
+    <None Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\Shaders\ExplosionsGlowAdditiveMobile.shader" />
+    <None Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\Shaders\ExplosionsParticleBlendInterpolated.shader" />
+    <None Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\Shaders\ExplosionsParticleBlendLight.shader" />
+    <None Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\Shaders\ExplosionsParticleBlendLightSoft.shader" />
     <None Include="Assets\Imports\Environment\Sci-fi_platforms\Sci-fi_platforms.txt" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

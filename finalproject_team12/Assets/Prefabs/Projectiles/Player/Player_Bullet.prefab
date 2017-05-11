@@ -147,7 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e2ccce703e72e4f8a9b9962f97161b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onDestructionEffect: {fileID: 0}
+  onDestructionEffect: {fileID: 1011812521563280, guid: 723b5ef5e3150f84d83506fae4913e0b,
+    type: 2}
 --- !u!136 &136935981502216478
 CapsuleCollider:
   m_ObjectHideFlags: 1
