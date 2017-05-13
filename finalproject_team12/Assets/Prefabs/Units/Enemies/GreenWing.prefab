@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 114501924268437560}
   - component: {fileID: 114976978123835242}
   - component: {fileID: 114074885909994148}
+  - component: {fileID: 114560568855561472}
   m_Layer: 10
   m_Name: GreenWing
   m_TagString: Enemy
@@ -576,6 +577,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 10
+--- !u!114 &114560568855561472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1488515096912240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 126bbf23e3594774facacdd3e627a1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gc: {fileID: 0}
+  scoreValue: 10
 --- !u!114 &114976978123835242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -601,3 +615,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestructionEffect: {fileID: 1054495152579494, guid: 1b54a09c837501d4da17e611062341bb,
     type: 2}
+  gc: {fileID: 0}

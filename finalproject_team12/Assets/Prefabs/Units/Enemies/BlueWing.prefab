@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 114859114761151638}
   - component: {fileID: 114010623173462798}
   - component: {fileID: 114944008547685300}
+  - component: {fileID: 114817711108064536}
   m_Layer: 10
   m_Name: BlueWing
   m_TagString: Enemy
@@ -572,6 +573,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestructionEffect: {fileID: 1054495152579494, guid: 1b54a09c837501d4da17e611062341bb,
     type: 2}
+  gc: {fileID: 0}
+--- !u!114 &114817711108064536
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1724298146902686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 126bbf23e3594774facacdd3e627a1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gc: {fileID: 0}
+  scoreValue: 10
 --- !u!114 &114859114761151638
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -18,7 +18,7 @@ using UnityEngine;
 [RequireComponent(typeof(MoveSpeedComponent))]
 [RequireComponent(typeof(DamageComponent))]
 [DisallowMultipleComponent]
-public abstract class GameUnit : MonoBehaviour
+public class GameUnit : MonoBehaviour
 {
 
     // *****************
@@ -32,7 +32,6 @@ public abstract class GameUnit : MonoBehaviour
     /// </summary>
     [Tooltip("The GameObject to instantiate upon destruction of this Projectile.")]
     public GameObject onDestructionEffect;
-
     private HealthComponent _healthComp;
     private MoveSpeedComponent _moveSpeedComp;
     private DamageComponent _damageComp;
@@ -43,7 +42,7 @@ public abstract class GameUnit : MonoBehaviour
     //  Saved as quick references to avoid GetComponent every time.
     //
     // *****************
-    
+
     public HealthComponent healthComponent
     {
         get
@@ -92,8 +91,11 @@ public abstract class GameUnit : MonoBehaviour
     {
         healthComponent.currentHealth -= damage;
 
-        if (healthComponent.currentHealth <= 0)
-            Die();
+		if (healthComponent.currentHealth <= 0) {
+			Die ();
+
+		}
+		    
 
     }
 
@@ -107,8 +109,9 @@ public abstract class GameUnit : MonoBehaviour
         {
             Instantiate(onDestructionEffect, transform.position, transform.rotation);
         }
-
         Destroy(gameObject);
+
+
     }
 
 }

@@ -1770,8 +1770,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invincible: 0
-  _currentHealth: 100
-  _maxHealth: 100
+  _currentHealth: 150
+  _maxHealth: 150
 --- !u!114 &114691248113404950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1819,7 +1819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b73f540ff0cb9f48b066776d06dd71c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
 --- !u!114 &114996152533366558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1855,7 +1855,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 5
-  m_Height: 25
+  m_Radius: 10
+  m_Height: 40
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 12}
+  m_Center: {x: 0, y: 0, z: 20}
