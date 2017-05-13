@@ -21,7 +21,7 @@ public class EnemyUnit : GameUnit {
     {
         if (other.CompareTag(Tags.Player))  // Target Player directly.
         {
-            PlayerUnit player = other.GetComponentInChildren<PlayerUnit>();
+            PlayerUnit player = other.transform.root.GetComponentInChildren<PlayerUnit>();
             if (player != null)
             {
                 // Damage dealt is the amount of health remaining on this Game Unit.
@@ -41,12 +41,12 @@ public class EnemyUnit : GameUnit {
 
     private void OnCollisionEnter(Collision collision)
     {
-        OnContactEnter(collision.transform.root.gameObject);
+        OnContactEnter(collision.gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        OnContactEnter(other.transform.root.gameObject);
+        OnContactEnter(other.gameObject);
     }
 
 }

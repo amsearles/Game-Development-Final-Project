@@ -261,7 +261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d300313daa8a0e84e883cd6d2c47f85f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onDestructionEffect: {fileID: 0}
+  onDestructionEffect: {fileID: 1047728932484910, guid: e34fe9dc4b644c44db2fa649867db1cb,
+    type: 2}
   trackingTargetInfo:
     trackedTarget: {fileID: 0}
     trackingAngle: 45

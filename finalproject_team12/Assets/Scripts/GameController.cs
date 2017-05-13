@@ -10,18 +10,24 @@ using System.IO;
 using UnityEditor;
 #endif
 
-public class GameController : MonoBehaviour {
-	public GUIText scoreText;
+public class GameController : MonoBehaviour
+{
+
+	public GameObject scoreText;
 	private int score;
+
     public void LoadScene(int sceneInt)
     {
         SceneManager.LoadScene(sceneInt);
     }
-	void Start(){
+
+	void Start()
+    {
 		score = 0;
 		UpdateScore ();
 
 	}
+
     public void LoadData(string filename)
     {
         /*
@@ -71,14 +77,17 @@ public class GameController : MonoBehaviour {
 		    Application.Quit();
         #endif
     }
-	public void AddScore(int value){
+
+	public void AddScore(int value)
+    {
 		score += value;
 		UpdateScore ();
 	}
+
 	public void UpdateScore()
 	{
-        if (scoreText != null )
-		    scoreText.text = "Score: " + score;
+        if (scoreText != null && scoreText.GetComponent<UnityEngine.UI.Text>() != null )
+		    scoreText.GetComponent<UnityEngine.UI.Text> ().text = "Score : " + score;
 	}
 
 }

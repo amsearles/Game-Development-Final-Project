@@ -12,16 +12,12 @@ using UnityEngine;
 [RequireComponent(typeof(RotateSpeedComponent))]
 public class ProjectileMissile : Projectile
 {
-    // TODO : This goes in WeaponMissileLauncher
-    //[Tooltip("Ignore this layer scaning for targets.")]
-    //public LayerMask targetedLayers;
-
     // *****************
     // 
     //  Variables
     //
     // *****************
-    
+
     [Tooltip("Provide values to turn this into a homing missile.")]
     public TrackingInfo trackingTargetInfo;
     // **** Private Variables ****
@@ -52,7 +48,7 @@ public class ProjectileMissile : Projectile
     //  Private Methods
     //
     // *****************
-    
+
     private bool IsTargetInRange(GameUnit target)
     {
         float degrees = Vector3.Angle(transform.forward,
@@ -88,7 +84,7 @@ public class ProjectileMissile : Projectile
 
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         MoveFoward();
 
@@ -103,7 +99,7 @@ public class ProjectileMissile : Projectile
 
         elapsedTime += Time.deltaTime;
     }
-    
+
 
     // *****************
     // 
