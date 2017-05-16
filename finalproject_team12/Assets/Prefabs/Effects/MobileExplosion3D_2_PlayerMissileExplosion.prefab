@@ -19,11 +19,15 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4893994994471016}
-  - component: {fileID: 198909746689846054}
-  - component: {fileID: 199530020565647024}
   - component: {fileID: 114653023361526244}
+  - component: {fileID: 199530020565647024}
+  - component: {fileID: 114159248597600406}
+  - component: {fileID: 114177512308480868}
+  - component: {fileID: 135132792949865640}
+  - component: {fileID: 54872198530387362}
   - component: {fileID: 82749911294451268}
-  m_Layer: 0
+  - component: {fileID: 198909746689846054}
+  m_Layer: 13
   m_Name: MobileExplosion3D_2_PlayerMissileExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +44,7 @@ GameObject:
   - component: {fileID: 4474105437657276}
   - component: {fileID: 198326100433364562}
   - component: {fileID: 199040413744593088}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +61,7 @@ GameObject:
   - component: {fileID: 4074332723451954}
   - component: {fileID: 198761977548831958}
   - component: {fileID: 199731038945395466}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +78,7 @@ GameObject:
   - component: {fileID: 4405385649426492}
   - component: {fileID: 108974163472788776}
   - component: {fileID: 114923742985254886}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +95,7 @@ GameObject:
   - component: {fileID: 4977492921736892}
   - component: {fileID: 198606262039623002}
   - component: {fileID: 199843237671445244}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Trails2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +112,7 @@ GameObject:
   - component: {fileID: 4152796015853392}
   - component: {fileID: 198491257149280380}
   - component: {fileID: 199056995972512634}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +129,7 @@ GameObject:
   - component: {fileID: 4851770100238094}
   - component: {fileID: 198360724795957144}
   - component: {fileID: 199195043650826740}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Trails1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,6 +233,21 @@ Transform:
   m_Father: {fileID: 4893994994471016}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54872198530387362
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047728932484910}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!82 &82749911294451268
 AudioSource:
   m_ObjectHideFlags: 1
@@ -343,6 +362,35 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114159248597600406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047728932484910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64f6d7bcf28539c4e84b972227920bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNeutral: 0
+  applyAtStartOnly: 0
+  damage: 35
+  rateOfDamage: 0.3
+  useDamageRadiusFalloff: 1
+--- !u!114 &114177512308480868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047728932484910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 029a0b2498d82914e9f5164277c1a969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customName: PlayerMissileExplosion
+  ownerTag: 
 --- !u!114 &114653023361526244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -392,6 +440,18 @@ MonoBehaviour:
     m_RotationOrder: 4
   GraphTimeMultiplier: 1.7
   GraphIntensityMultiplier: 1.2
+--- !u!135 &135132792949865640
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047728932484910}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198326100433364562
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -447,7 +507,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -128122345
+  randomSeed: -796522227
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3090,7 +3150,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -1970910922
+  randomSeed: 570066226
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -5703,7 +5763,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 2005078810
+  randomSeed: 1011709549
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -8238,7 +8298,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -275196584
+  randomSeed: 1738123894
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -10851,7 +10911,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1076509917
+  randomSeed: 631294878
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -13422,7 +13482,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 543358856
+  randomSeed: 914746932
   InitialModule:
     serializedVersion: 3
     enabled: 1

@@ -20,5 +20,16 @@ public static class Tags {
     {
         get { return "Enemy"; }
     }
+
+    /// <summary>
+    /// Determine if the game object with <see cref="tag1"/> is an adversary of <see cref="tag2"/>.
+    /// </summary>
+    /// <param name="tag1"></param>
+    /// <param name="tag2"></param>
+    /// <returns></returns>
+    public static bool isEnemy(string tag1, string tag2)
+    {
+        return ((tag1.Equals(Player) && tag2.Equals(Enemy)) || (tag1.Equals(Enemy) && tag2.Equals(Player)));
+    }
     
 }

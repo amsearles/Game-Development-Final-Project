@@ -57,7 +57,7 @@ public class Weapon : MonoBehaviour
     protected float deltaSpeed = 0.0f;            // Amount to add to Projectile speed upon firing.
     protected float nextFire = 0.0f;            // Next time of next available shot.
     protected int pslIndex;                   // Index to cycle each Weapon's Projectile Spawn Locations.
-    protected string ownerTag;                   // Tag name of this Weapon's wielder.
+    public string ownerTag;                   // Tag name of this Weapon's wielder.
 
 
 

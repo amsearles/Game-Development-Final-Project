@@ -31,10 +31,10 @@ public class AIMoveStraight : MonoBehaviour {
         moveSpeedComp = GetComponent<MoveSpeedComponent>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         Transform transform = GetComponent<Transform>();
-        //transform.Translate(transform.forward * moveSpeedComp.speed * Time.deltaTime);
+        
         transform.position += transform.forward * moveSpeedComp.speed * Time.deltaTime;
 
         //Rigidbody rigidbody = GetComponent<Rigidbody>();

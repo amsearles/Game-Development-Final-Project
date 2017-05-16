@@ -13,6 +13,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerUnit : GameUnit
 {
+	public AudioClip shoot;
+	private AudioSource source;
+	private float vol = 0.5F;
     // **** Variables ****
     [SerializeField]
     private int _lives = 3;
@@ -30,7 +33,9 @@ public class PlayerUnit : GameUnit
     //  Public Methods
     //
     // *****************
-
+	void Awake(){
+		source = GetComponent<AudioSource> ();
+	}
     public void MoveToward(Vector3 newPosition)
     {
         transform.position = Vector3.Lerp(transform.position, newPosition, moveSpeedComponent.speed * Time.deltaTime);
@@ -53,6 +58,7 @@ public class PlayerUnit : GameUnit
          * Static int is possible but it will deny access via Inspector.
          * Easy Fix is to place this into GameController.
          */
+
     }
 
     // *****************
@@ -112,11 +118,14 @@ public class PlayerUnit : GameUnit
 
             MoveToward(mousePos);
             ConstrainPositionToScreen();
+            if (source != null)
+			    source.PlayOneShot (shoot, 20);
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Use on collision");
         OnContactEnter(collision.gameObject);
     }
 

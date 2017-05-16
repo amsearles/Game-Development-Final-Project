@@ -31,6 +31,7 @@ public abstract class Projectile : MonoBehaviour
     [Tooltip("The GameObject to instantiate upon destruction of this Projectile.")]
     public GameObject onDestructionEffect;
 
+
     protected string _ownerTag = "";
     protected MoveSpeedComponent _moveSpeedComp;
     protected DamageComponent _damageComp;
@@ -81,11 +82,12 @@ public abstract class Projectile : MonoBehaviour
     {
         Rigidbody rigidbody = GetComponent<Rigidbody>();
 
-        if (rigidbody != null)
-            rigidbody.velocity = transform.forward * moveSpeedComponent.speed * Time.deltaTime;
-        else
-            transform.Translate(transform.forward * moveSpeedComponent.speed * Time.deltaTime, Space.World);
+		if (rigidbody != null) 
+			rigidbody.velocity = transform.forward * moveSpeedComponent.speed * Time.deltaTime;
+		 else 
+			transform.Translate (transform.forward * moveSpeedComponent.speed * Time.deltaTime, Space.World);
 
+		
     }
 
     // *****************
@@ -118,13 +120,25 @@ public abstract class Projectile : MonoBehaviour
                 if (collidedGameUnit != null)
                     collidedGameUnit.TakeDamage(damageComponent.damage);
 
-                if (onDestructionEffect != null)
-                    Instantiate(onDestructionEffect, transform.position, transform.rotation);
+                HandleOnDestructionEffect();
 
                 Destroy(gameObject);
             }
 
         }
     }
+
+
+    protected virtual GameObject HandleOnDestructionEffect()
+    {
+        GameObject instantiatedEffect = null;
+
+        if (onDestructionEffect != null)
+            instantiatedEffect = Instantiate(onDestructionEffect, transform.position, transform.rotation);
+
+        return instantiatedEffect;
+    }
+
+
 
 }

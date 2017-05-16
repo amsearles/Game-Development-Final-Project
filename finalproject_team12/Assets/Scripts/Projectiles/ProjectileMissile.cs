@@ -45,7 +45,7 @@ public class ProjectileMissile : Projectile
 
     // *****************
     // 
-    //  Private Methods
+    //  Private/Protected Methods
     //
     // *****************
 
@@ -66,6 +66,20 @@ public class ProjectileMissile : Projectile
     {
         Quaternion direction = Quaternion.LookRotation(position - transform.position);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, direction, rotateSpeedComp.speed * Time.deltaTime);
+    }
+
+    protected override GameObject HandleOnDestructionEffect()
+    {
+        GameObject instantiatedEffect =  base.HandleOnDestructionEffect();
+        IdentifierComponent idComponent = null;
+        
+        if (instantiatedEffect != null)
+            idComponent = instantiatedEffect.GetComponent<IdentifierComponent>();
+
+        if (idComponent != null)
+            idComponent.ownerTag = this.ownerTag;
+
+        return instantiatedEffect;
     }
 
     // *****************

@@ -83,8 +83,7 @@ public class GameUnit : MonoBehaviour
     /// <summary>
     /// Take damage by subtracting the given damage from health component.
     /// It will instantiate the <see cref="onDestructionEffect"/> when
-    /// this object's health reaching zero. Afterward this object is Destroyed.
-    /// Override it if necessary.
+    /// this object's health reaches zero. Afterward this object is Destroyed.
     /// </summary>
     /// <param name="damage">Amount to subtract from HealthComponent</param>
     public virtual void TakeDamage(int damage)
@@ -96,7 +95,6 @@ public class GameUnit : MonoBehaviour
 
 		}
 		    
-
     }
 
     /// <summary>
@@ -110,8 +108,7 @@ public class GameUnit : MonoBehaviour
             Instantiate(onDestructionEffect, transform.position, transform.rotation);
         }
         Destroy(gameObject);
-
-
+        
     }
 
 }

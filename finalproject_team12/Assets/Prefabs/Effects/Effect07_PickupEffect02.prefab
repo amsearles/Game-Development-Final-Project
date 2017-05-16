@@ -110,9 +110,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 7
   m_Type: 2
-  m_Color: {r: 1, g: 0.7607844, b: 0.72156864, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 2
-  m_Range: 3
+  m_Range: 1
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f8515f366fd2e46ae2561add5696cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0
+  delay: 1
 --- !u!198 &198198352183659772
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -155,7 +155,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1480592580334794}
   serializedVersion: 5
   lengthInSec: 5
-  simulationSpeed: 1
+  simulationSpeed: 4
   looping: 1
   prewarm: 0
   playOnAwake: 1
@@ -202,7 +202,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -1811307244
+  randomSeed: -1192698451
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -549,7 +549,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     startRotation:
-      scalar: 0
+      scalar: 0.0034906585
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -575,7 +575,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
       minMaxState: 0
-    randomizeRotationDirection: 0
+    randomizeRotationDirection: 1
     maxNumParticles: 1
     size3D: 0
     rotation3D: 0
