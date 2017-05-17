@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
 {
 
 	public GameObject scoreText;
-	private int score;
+	public int score;
 
     public void LoadScene(int sceneInt)
     {
@@ -89,8 +89,8 @@ public class GameController : MonoBehaviour
 
 	public void UpdateScore()
 	{
-        if (scoreText != null && scoreText.GetComponent<UnityEngine.UI.Text>() != null )
-		    scoreText.GetComponent<UnityEngine.UI.Text> ().text = "Score : " + score;
+        //if (scoreText != null && scoreText.GetComponent<UnityEngine.UI.Text>() != null )
+		//    scoreText.GetComponent<UnityEngine.UI.Text> ().text = "Score : " + score;
 	}
 
 }

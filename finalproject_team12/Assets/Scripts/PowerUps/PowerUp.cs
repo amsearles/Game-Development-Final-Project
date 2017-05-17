@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MoveSpeedComponent))]
+[RequireComponent(typeof(SphereCollider))]
 public abstract class PowerUp : MonoBehaviour {
 
     [Tooltip("Optional effect to instantiate upon pickup")]
@@ -20,8 +21,13 @@ public abstract class PowerUp : MonoBehaviour {
             if (onPickupEffect != null)
                 Instantiate(onPickupEffect, transform.position, transform.rotation);
 
-            Destroy(gameObject);
+            DestroyPowerUp(gameObject);
         }
+    }
+
+    protected virtual void DestroyPowerUp(Object obj)
+    {
+        Destroy(obj);
     }
 
     /// <summary>Handle the improvements/effects onto the <see cref="PlayerUnit"/>.</summary>

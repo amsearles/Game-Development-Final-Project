@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f8515f366fd2e46ae2561add5696cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0
+  delay: 3
 --- !u!198 &198620424786736872
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -155,7 +155,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1817603987205728}
   serializedVersion: 5
   lengthInSec: 5
-  simulationSpeed: 1
+  simulationSpeed: 2
   looping: 1
   prewarm: 0
   playOnAwake: 1
@@ -202,7 +202,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 742100584
+  randomSeed: 1261163162
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -363,10 +363,10 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0, g: 1, b: 1, a: 1}
       minMaxState: 0
     startSize:
-      scalar: 3
+      scalar: 30
       maxCurve:
         serializedVersion: 2
         m_Curve:

@@ -76,7 +76,10 @@ public class DamageAOEComponent : MonoBehaviour {
         unitsInAOEList = new List<GameUnit>();
 
         // Apply damage to units within range once and cease any damages afterward.
-        if (applyAtStartOnly) ApplyDamageAtStartOnly();
+        if (applyAtStartOnly)
+            ApplyDamageAtStartOnly();
+
+        //StartCoroutine(DamageUnitsInAOEList());
     }
 
     
@@ -85,9 +88,12 @@ public class DamageAOEComponent : MonoBehaviour {
         if ((Time.time > nextDamageTime) && !applyAtStartOnly)
             AddGameUnitToList(other);
     }
-    
+
     // NOTE: Unity Execution Order runs OnTrigger() functions first before Update().
     // NOTE: Every Collider in OnTrigger will process that code, thus damage application is waited until Update().
+    /* NOTE: Unsure if possible to use StartCoroutine() as it requires knowing when OnTrigger is finished processing units in range.
+     *       Untested approach: call StartCoroutine() in Start() and have it test for 'applyAtStartOnly' and handle rate of damage.
+     */
 
     private void Update()
     {
@@ -98,7 +104,15 @@ public class DamageAOEComponent : MonoBehaviour {
         }
     }
 
-    
+    //private IEnumerator DamageUnitsInAOEList()
+    //{
+    //    while(true)
+    //    {
+    //        ProcessUnitsInAOEList();
+    //        yield return new WaitForSeconds(rateOfDamage);
+    //    }
+    //}
+
     // *****************
     // 
     //  Private Methods

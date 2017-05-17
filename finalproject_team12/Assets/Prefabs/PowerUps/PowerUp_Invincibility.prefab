@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 4142372305036976}
   - component: {fileID: 114106157126678448}
   - component: {fileID: 114192232479547366}
-  - component: {fileID: 114614704063802636}
+  - component: {fileID: 114515273464487674}
   - component: {fileID: 135630378057599972}
   m_Layer: 0
   m_Name: PowerUp_Invincibility
@@ -422,7 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
---- !u!114 &114614704063802636
+--- !u!114 &114515273464487674
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -430,12 +430,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1408425756120786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c4bbff26ca269840aa938551f61dc43, type: 3}
+  m_Script: {fileID: 11500000, guid: 5738c63a3055b0c4d91c924868e1f6cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickupEffect: {fileID: 1960265763807536, guid: 5daacebd174ad1f4eb5061a5fada3f3c,
+  onPickupEffect: {fileID: 1137644354420610, guid: 1aa47b60c2e9e9b429cda55c1033cf7e,
     type: 2}
-  increaseHealth: 20
+  invicibilityDuration: 5
 --- !u!114 &114620167679490752
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -1434,7 +1434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e58cc6f12633184b909e91de40d538d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickupEffect: {fileID: 1423934583962758, guid: 1047aca8c8fd77e478add16ea3a952fb,
+  onPickupEffect: {fileID: 1745454435648444, guid: 5d24a65858920b949906308b178d15a8,
     type: 2}
   weaponList:
   - {fileID: 114865603594830134, guid: e00288e1ac92d5a498b1fce984fd450c, type: 2}

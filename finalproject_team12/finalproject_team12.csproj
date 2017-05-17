@@ -108,7 +108,9 @@
     <Compile Include="Assets\Anthony&apos;s Stuff\_Completed-Assets\Scripts\Done_WeaponController.cs" />
     <Compile Include="Assets\ElricsStuff\Scripts\AudioController.cs" />
     <Compile Include="Assets\ElricsStuff\Scripts\AudioPlayer.cs" />
-    <Compile Include="Assets\ElricsStuff\Scripts\UIHealth.cs" />
+    <Compile Include="Assets\ElricsStuff\Scripts\UIControl.cs" />
+    <Compile Include="Assets\ElricsStuff\Scripts\UIHealthController.cs" />
+    <Compile Include="Assets\ElricsStuff\Scripts\UIScoreController.cs" />
     <Compile Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\DemoSources\ExplosionDemoGUI.cs" />
     <Compile Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\DemoSources\ExplosionDemoReactivator.cs" />
     <Compile Include="Assets\Imports\Effects\ExplosionEffects_KriptoFX\DemoSources\ExplosionPlatformActivator.cs" />
@@ -128,7 +130,6 @@
     <Compile Include="Assets\Imports\PowerUps\PowerUp\Scripts\ScaleParticles.cs" />
     <Compile Include="Assets\Imports\PowerUps\PowerUp\Scripts\TakeablePowerUp.cs" />
     <Compile Include="Assets\Imports\PowerUps\PowerUp\Scripts\Utility\Singleton.cs" />
-    <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\AI\Firing\AIFiringStraight.cs" />
     <Compile Include="Assets\Scripts\AI\Movement\AIMoveRotateAround.cs" />
     <Compile Include="Assets\Scripts\AI\Movement\AIMoveStraight.cs" />
@@ -155,6 +156,7 @@
     <Compile Include="Assets\Scripts\Level\ScoreIncrement.cs" />
     <Compile Include="Assets\Scripts\PowerUps\AddWeaponPowerUp.cs" />
     <Compile Include="Assets\Scripts\PowerUps\HealthPowerUp.cs" />
+    <Compile Include="Assets\Scripts\PowerUps\InvincibilityPowerUp.cs" />
     <Compile Include="Assets\Scripts\PowerUps\PowerUp.cs" />
     <Compile Include="Assets\Scripts\PowerUps\TrailPowerUp.cs" />
     <Compile Include="Assets\Scripts\Projectiles\Projectile.cs" />

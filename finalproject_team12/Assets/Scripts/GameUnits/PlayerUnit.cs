@@ -125,7 +125,6 @@ public class PlayerUnit : GameUnit
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Use on collision");
         OnContactEnter(collision.gameObject);
     }
 
