@@ -82,7 +82,12 @@ public class DamageAOEComponent : MonoBehaviour {
         //StartCoroutine(DamageUnitsInAOEList());
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if ((Time.time > nextDamageTime) && !applyAtStartOnly)
+            AddGameUnitToList(other);
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if ((Time.time > nextDamageTime) && !applyAtStartOnly)
@@ -155,10 +160,13 @@ public class DamageAOEComponent : MonoBehaviour {
     {
         foreach (GameUnit x in unitsInAOEList)
         {
-            if (isNeutral)
-                ApplyDamage(x, damage);
-            else if (Tags.isEnemy(ownerTag, x.tag))
-                ApplyDamage(x, damage);
+            if (x != null)
+            {
+                if (isNeutral)
+                    ApplyDamage(x, damage);
+                else if (Tags.isEnemy(ownerTag, x.tag))
+                    ApplyDamage(x, damage);
+            }
         }
 
         unitsInAOEList.Clear();     // Clear out list for next AOE scan

@@ -16,7 +16,11 @@ public class PlayerUnit : GameUnit
 	public AudioClip shoot;
 	private AudioSource source;
 	private float vol = 0.5F;
+
     // **** Variables ****
+    public List<Renderer> playerUnitBodyMeshes;
+    public List<Collider> playerUnitBodyColliders;
+
     [SerializeField]
     private int _lives = 3;
 
@@ -33,9 +37,11 @@ public class PlayerUnit : GameUnit
     //  Public Methods
     //
     // *****************
+
 	void Awake(){
 		source = GetComponent<AudioSource> ();
 	}
+
     public void MoveToward(Vector3 newPosition)
     {
         transform.position = Vector3.Lerp(transform.position, newPosition, moveSpeedComponent.speed * Time.deltaTime);

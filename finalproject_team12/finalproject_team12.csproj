@@ -157,6 +157,7 @@
     <Compile Include="Assets\Scripts\PowerUps\AddWeaponPowerUp.cs" />
     <Compile Include="Assets\Scripts\PowerUps\HealthPowerUp.cs" />
     <Compile Include="Assets\Scripts\PowerUps\InvincibilityPowerUp.cs" />
+    <Compile Include="Assets\Scripts\PowerUps\MaxHealthPowerUp.cs" />
     <Compile Include="Assets\Scripts\PowerUps\PowerUp.cs" />
     <Compile Include="Assets\Scripts\PowerUps\TrailPowerUp.cs" />
     <Compile Include="Assets\Scripts\Projectiles\Projectile.cs" />

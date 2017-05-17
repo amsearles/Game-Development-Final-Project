@@ -375,8 +375,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isNeutral: 0
   applyAtStartOnly: 0
-  damage: 35
-  rateOfDamage: 0.3
+  damage: 10
+  rateOfDamage: 0.05
   useDamageRadiusFalloff: 1
 --- !u!114 &114177512308480868
 MonoBehaviour:

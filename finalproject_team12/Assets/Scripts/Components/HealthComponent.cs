@@ -23,7 +23,7 @@ public class HealthComponent : MonoBehaviour {
 
     [Tooltip("Effect to attach onto the Player to indicate invincibility is in effect.")]
     [SerializeField]
-    private GameObject invincibilityEffect;
+    private GameObject invincibilitySphere;
 
     [SerializeField]
     [Tooltip("Current health at this moment. \n" +
@@ -35,7 +35,7 @@ public class HealthComponent : MonoBehaviour {
     private int _maxHealth = 100;
 
     // Instantiated sphere representing invincibility as active.
-    private GameObject invincibilitySphere;
+    private GameObject currentInvSphere;
 
     // *****************
     // 
@@ -50,8 +50,8 @@ public class HealthComponent : MonoBehaviour {
         {
             _invincible = value;
             
-            if (invincibilitySphere != null)
-                invincibilitySphere.SetActive(_invincible);
+            if (currentInvSphere != null)
+                currentInvSphere.SetActive(_invincible);
         }
     }
 
@@ -139,29 +139,64 @@ public class HealthComponent : MonoBehaviour {
         invincible = !invincible;
     }
 
-    private void Start()
+    private Bounds CalculateShipBounds()
     {
         // Set up Invincibility Effect object to encompass this entire unit.
         Renderer[] renderers = transform.root.GetComponentsInChildren<Renderer>();
         Bounds bounds = new Bounds();
+        //Collider[] colliders = transform.root.GetComponentsInChildren<Collider>();
+
 
         foreach (Renderer x in renderers)
-            bounds.Encapsulate(x.bounds);
-
-        // Instantiate the invincibilityEffect and have it attached to the unit.
-        if (invincibilityEffect != null)
         {
-
-            invincibilitySphere = Instantiate(invincibilityEffect, transform.position,
-                                                        transform.rotation, transform.root);
-
-            invincibilitySphere.transform.localScale = new Vector3(bounds.extents.x,
-                                                                    bounds.extents.x,
-                                                                    bounds.extents.x);
-
-            invincibilitySphere.SetActive(false);
+            if (x.CompareTag(transform.root.tag))
+            {
+                bounds.Encapsulate(x.bounds);
+            }
         }
+
+        return bounds;
+    }
+
+    private void SetInvincibilitySphere(Bounds bounds)
+    {
+
+
+        // Destroy existing effect if made prior.
+        if (currentInvSphere != null)
+            Destroy(currentInvSphere.gameObject);
+
+
+        // Do nothing if no given effect.
+        if (invincibilitySphere == null) return;
+
+        // Instantiate the invincibility effect and have it attached to the unit.
+        if (currentInvSphere == null)
+            currentInvSphere = Instantiate(invincibilitySphere, transform.position,
+                                                        transform.rotation, transform.root);
         
+        // Scale the newly instantiated effect to encompass the game unit.
+        if (currentInvSphere != null)
+            currentInvSphere.transform.localScale = new Vector3(bounds.size.x + 2,
+                                                                    bounds.size.x + 2,
+                                                                    bounds.size.x + 2);
+        
+    }
+
+    // *****************
+    // 
+    //  Unity Methods
+    //
+    // *****************
+
+    private void Start()
+    {
+        Bounds bounds = CalculateShipBounds();
+
+        SetInvincibilitySphere(bounds);
+
+        if (currentInvSphere != null)
+            currentInvSphere.SetActive(false);
     }
 
 }

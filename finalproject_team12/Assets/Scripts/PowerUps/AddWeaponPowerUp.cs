@@ -54,10 +54,7 @@ public class AddWeaponPowerUp : PowerUp {
         // Get the index of the first weapon that the Player doesn't have yet.
         for (int i = 0; i < weaponList.Count; i++)
             if (!playerWeaponNames.Contains(weaponList[i].weaponName))
-            {
-                Debug.Log(weaponList[i].weaponName);
                 return i;
-            }
 
         return -1;
     }
