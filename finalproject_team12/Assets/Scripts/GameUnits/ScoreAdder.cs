@@ -14,8 +14,7 @@ public class ScoreAdder : MonoBehaviour {
 		gc = gcObj.GetComponent<GameController> ();
 		scoreValue = 100;	
 	}
-	void Update(){
-	}
+	
 	// Update is called once per frame
 	void OnDestroy () {
         if (gameObject.GetComponent<HealthComponent> () != null && gameObject.GetComponent<HealthComponent>().currentHealth <= 0 && gc != null)

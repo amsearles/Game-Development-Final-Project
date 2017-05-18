@@ -1799,7 +1799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestructionEffect: {fileID: 1273416113246406, guid: 45756ec3bae781e4ab1061109002e1aa,
     type: 2}
-  shoot: {fileID: 0}
+  shoot: {fileID: 8300000, guid: ce543b6610825c149865540c2453eadf, type: 3}
   playerUnitBodyMeshes: []
   playerUnitBodyColliders: []
   _lives: 3
@@ -1849,7 +1849,7 @@ MonoBehaviour:
     afterSalvoDelay: 3
   infiniteAmmo: 1
   ammoCount: 10
-  rateOfFire: 3
+  rateOfFire: 1
   ownerTag: 
   isHomingMissile: 1
   targetedUnitList: []
@@ -1862,7 +1862,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 10
-  m_Height: 40
+  m_Radius: 30
+  m_Height: 25
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 20}
+  m_Center: {x: 0, y: 0, z: 30}

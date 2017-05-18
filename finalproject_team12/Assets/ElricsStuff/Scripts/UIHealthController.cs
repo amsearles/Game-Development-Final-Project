@@ -7,8 +7,8 @@ using UnityEngine;
 
 public class UIHealthController : UIControl
 {
-
-    protected PlayerUnit playerunit;
+    //protected PlayerUnit playerunit;
+    public static PlayerUnit playerunit;
     int lastCurrentHealth = 0;
     int lastMaxHealth = 0;
 

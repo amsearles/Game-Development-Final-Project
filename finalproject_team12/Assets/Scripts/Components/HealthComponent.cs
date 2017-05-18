@@ -37,6 +37,7 @@ public class HealthComponent : MonoBehaviour {
     // Instantiated sphere representing invincibility as active.
     private GameObject currentInvSphere;
 
+
     // *****************
     // 
     //  Properties
@@ -84,6 +85,79 @@ public class HealthComponent : MonoBehaviour {
         }
     }
     
+
+    // *****************
+    // 
+    //  Unity Methods
+    //
+    // *****************
+
+    private void Awake()
+    {
+        Bounds bounds = CalculateShipBounds();
+
+        SetInvincibilitySphere(bounds);
+
+        if (currentInvSphere != null)
+            currentInvSphere.SetActive(false);
+        else
+            Debug.LogError(currentInvSphere + "InvincibilitySphere NOT FOUNDED");
+    }
+
+
+    // *****************
+    // 
+    //  Private Methods
+    //
+    // *****************
+
+    private Bounds CalculateShipBounds()
+    {
+        // Set up Invincibility Effect object to encompass this entire unit.
+        Renderer[] renderers = transform.root.GetComponentsInChildren<Renderer>();
+        Bounds bounds = new Bounds();
+        //Collider[] colliders = transform.root.GetComponentsInChildren<Collider>();
+
+
+        foreach (Renderer x in renderers)
+        {
+            if (x.CompareTag(transform.root.tag))
+            {
+                bounds.Encapsulate(x.bounds);
+            }
+        }
+
+        return bounds;
+    }
+    
+    private void SetInvincibilitySphere(Bounds bounds)
+    {
+        // Do nothing if no given effect.
+        if (invincibilitySphere == null) return;
+
+        // Instantiate the invincibility effect and have it attached to the unit.
+        if (currentInvSphere == null)
+            currentInvSphere = Instantiate(invincibilitySphere, transform.position,
+                                                        transform.rotation, transform.root);
+        
+        // Scale the newly instantiated effect to encompass the game unit.
+        if (currentInvSphere != null)
+            currentInvSphere.transform.localScale = new Vector3(bounds.size.x + 2,
+                                                                    bounds.size.x + 2,
+                                                                    bounds.size.x + 2);
+        
+    }
+
+    private IEnumerator TimedInvincibility(bool value, float duration)
+    {
+        invincible = value;
+
+        yield return new WaitForSeconds(duration);
+
+        invincible = !invincible;
+    }
+
+
     // *****************
     // 
     //  Public Methods
@@ -121,82 +195,6 @@ public class HealthComponent : MonoBehaviour {
             StopCoroutine(TimedInvincibility(value, duration));
             StartCoroutine(TimedInvincibility(value, duration));
         }
-    }
-    
-
-    // *****************
-    // 
-    //  Private Methods
-    //
-    // *****************
-
-    private IEnumerator TimedInvincibility(bool value, float duration)
-    {
-        invincible = value;
-
-        yield return new WaitForSeconds(duration);
-        
-        invincible = !invincible;
-    }
-
-    private Bounds CalculateShipBounds()
-    {
-        // Set up Invincibility Effect object to encompass this entire unit.
-        Renderer[] renderers = transform.root.GetComponentsInChildren<Renderer>();
-        Bounds bounds = new Bounds();
-        //Collider[] colliders = transform.root.GetComponentsInChildren<Collider>();
-
-
-        foreach (Renderer x in renderers)
-        {
-            if (x.CompareTag(transform.root.tag))
-            {
-                bounds.Encapsulate(x.bounds);
-            }
-        }
-
-        return bounds;
-    }
-
-    private void SetInvincibilitySphere(Bounds bounds)
-    {
-
-
-        // Destroy existing effect if made prior.
-        if (currentInvSphere != null)
-            Destroy(currentInvSphere.gameObject);
-
-
-        // Do nothing if no given effect.
-        if (invincibilitySphere == null) return;
-
-        // Instantiate the invincibility effect and have it attached to the unit.
-        if (currentInvSphere == null)
-            currentInvSphere = Instantiate(invincibilitySphere, transform.position,
-                                                        transform.rotation, transform.root);
-        
-        // Scale the newly instantiated effect to encompass the game unit.
-        if (currentInvSphere != null)
-            currentInvSphere.transform.localScale = new Vector3(bounds.size.x + 2,
-                                                                    bounds.size.x + 2,
-                                                                    bounds.size.x + 2);
-        
-    }
-
-    // *****************
-    // 
-    //  Unity Methods
-    //
-    // *****************
-
-    private void Start()
-    {
-        Bounds bounds = CalculateShipBounds();
-
-        SetInvincibilitySphere(bounds);
-
-        if (currentInvSphere != null)
-            currentInvSphere.SetActive(false);
     }
 
 }

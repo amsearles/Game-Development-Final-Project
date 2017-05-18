@@ -265,7 +265,7 @@ MonoBehaviour:
     type: 2}
   trackingTargetInfo:
     trackedTarget: {fileID: 0}
-    trackingAngle: 45
+    trackingAngle: 90
     trackingDuration: 3
 --- !u!114 &114671491190470242
 MonoBehaviour:

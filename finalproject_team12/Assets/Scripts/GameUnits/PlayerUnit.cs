@@ -13,59 +13,47 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerUnit : GameUnit
 {
-	public AudioClip shoot;
-	private AudioSource source;
-	private float vol = 0.5F;
+	//public AudioClip shoot;
+	//private AudioSource source;
+	//private float vol = 0.5F;
 
     // **** Variables ****
     public List<Renderer> playerUnitBodyMeshes;
     public List<Collider> playerUnitBodyColliders;
 
-    [SerializeField]
-    private int _lives = 3;
-
-    // **** Property ****
-    public int lives
-    {
-        get { return _lives; }
-        set { _lives = (value < 0) ? 0 : value; }
-    }
-
+    private GameController gc;
 
     // *****************
     // 
-    //  Public Methods
+    //  Unity Methods
     //
     // *****************
 
-	void Awake(){
-		source = GetComponent<AudioSource> ();
-	}
+    private void Start()
+    {
+        GameObject gobj = GameObject.FindGameObjectWithTag(Tags.GameController);
 
+        if (gobj == null)
+            throw new Exception("MISSING GAMECONTROLLER IN SCENE!");
+        else
+            gc = gobj.GetComponentInChildren<GameController>();
+    }
+
+    // **********************************
+    // 
+    //      Public/Protected Methods
+    //
+    // **********************************
+
+    //void Awake(){
+    //	source = GetComponent<AudioSource> ();
+    //}
+    
     public void MoveToward(Vector3 newPosition)
     {
         transform.position = Vector3.Lerp(transform.position, newPosition, moveSpeedComponent.speed * Time.deltaTime);
     }
     
-    public override void TakeDamage(int damage)
-    {
-        base.TakeDamage(damage);
-        
-        // TODO: Maybe handle health slider / health text here.
-        
-    }
-
-    public void Respawn()
-    {
-        // TODO: use lives to respawn PlayerUnit.
-        /*
-         * Dilemma:
-         * PlayerUnit is the actual unit and gets Destroy() on death.
-         * Static int is possible but it will deny access via Inspector.
-         * Easy Fix is to place this into GameController.
-         */
-
-    }
 
     // *****************
     // 
@@ -92,6 +80,39 @@ public class PlayerUnit : GameUnit
 
         transform.position = currentPosition;
     }
+    
+
+    // *****************
+    // 
+    //  Unity Methods
+    //
+    // *****************
+    
+    private void Update()
+    {
+        if (Input.GetButton("Fire1"))
+        {
+            Vector3 mousePos = Input.mousePosition;
+            mousePos.z = Camera.main.transform.position.y;  //Camera is at an Y offset from 0.
+            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+
+
+            MoveToward(mousePos);
+            ConstrainPositionToScreen();
+            //if (source != null)
+			    //source.PlayOneShot (shoot, 20);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        OnContactEnter(collision.gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        OnContactEnter(other.gameObject);
+    }
 
     /// <summary>Handler method for dealing with trigger/collisions between Player and Enemy.</summary>
     /// <param name="other">Object struck on impact.</param>
@@ -106,39 +127,6 @@ public class PlayerUnit : GameUnit
              */
         }
     }
-
-    // *****************
-    // 
-    //  Unity Methods
-    //
-    // *****************
-
-    private void Update()
-    {
-        if (Input.GetButton("Fire1"))
-        {
-            Vector3 mousePos = Input.mousePosition;
-            mousePos.z = Camera.main.transform.position.y;  //Camera is at an Y offset from 0.
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
-
-            MoveToward(mousePos);
-            ConstrainPositionToScreen();
-            if (source != null)
-			    source.PlayOneShot (shoot, 20);
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        OnContactEnter(collision.gameObject);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        OnContactEnter(other.gameObject);
-    }
-    
 
 
     //private void OnMouseDrag ()

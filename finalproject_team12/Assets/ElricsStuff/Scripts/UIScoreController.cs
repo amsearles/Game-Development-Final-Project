@@ -9,12 +9,7 @@ public class UIScoreController : UIControl
 {
 
     int lastScore = 0;
-
-    GameController Get()
-    {
-        return GameObject.FindObjectOfType<GameController>();
-    }
-
+    
     protected override void Start()
     {
 

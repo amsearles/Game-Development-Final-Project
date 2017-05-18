@@ -21,6 +21,11 @@ public static class Tags {
         get { return "Enemy"; }
     }
 
+    public static string GameController
+    {
+        get { return "GameController"; }
+    }
+
     /// <summary>
     /// Determine if the game object with <see cref="tag1"/> is an adversary of <see cref="tag2"/>.
     /// </summary>

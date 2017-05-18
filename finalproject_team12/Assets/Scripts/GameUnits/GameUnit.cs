@@ -72,13 +72,13 @@ public class GameUnit : MonoBehaviour
             return _damageComp;
         }
     }
-    
 
-    // *****************
+
+    // **********************************
     // 
-    //  Public Methods
+    //      Public/Protected Methods
     //
-    // *****************
+    // **********************************
 
     /// <summary>
     /// Take damage by subtracting the given damage from health component.
@@ -91,24 +91,25 @@ public class GameUnit : MonoBehaviour
         healthComponent.currentHealth -= damage;
 
 		if (healthComponent.currentHealth <= 0) {
+            DieEffect();
 			Die ();
-
 		}
 		    
+    }
+
+    protected virtual void DieEffect()
+    {
+        if (onDestructionEffect != null)
+            Instantiate(onDestructionEffect, transform.position, transform.rotation);
     }
 
     /// <summary>
     /// Instantiate the given GameObject in <see cref="onDestructionEffect"/> and
     /// then destroy this current object.
     /// </summary>
-    public virtual void Die()
+    protected virtual void Die()
     {
-        if (onDestructionEffect != null)
-        {
-            Instantiate(onDestructionEffect, transform.position, transform.rotation);
-        }
         Destroy(gameObject);
-        
     }
 
 }
