@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.AI;
 using UnityEngine;
 
 /**
@@ -13,15 +14,10 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerUnit : GameUnit
 {
-	//public AudioClip shoot;
-	//private AudioSource source;
-	//private float vol = 0.5F;
 
     // **** Variables ****
-    public List<Renderer> playerUnitBodyMeshes;
-    public List<Collider> playerUnitBodyColliders;
-
     private GameController gc;
+    private Square mapBoundaries;
 
     // *****************
     // 
@@ -37,6 +33,12 @@ public class PlayerUnit : GameUnit
             throw new Exception("MISSING GAMECONTROLLER IN SCENE!");
         else
             gc = gobj.GetComponentInChildren<GameController>();
+
+        mapBoundaries = GetMapBoundary();
+        //Debug.Log("LEFT:" + mapBoundaries.left);
+        //Debug.Log("RIGHT:" + mapBoundaries.right);
+        //Debug.Log("TOP:" + mapBoundaries.top);
+        //Debug.Log("BOTTOM:" + mapBoundaries.bottom);
     }
 
     // **********************************
@@ -44,10 +46,6 @@ public class PlayerUnit : GameUnit
     //      Public/Protected Methods
     //
     // **********************************
-
-    //void Awake(){
-    //	source = GetComponent<AudioSource> ();
-    //}
     
     public void MoveToward(Vector3 newPosition)
     {
@@ -60,34 +58,105 @@ public class PlayerUnit : GameUnit
     //  Private Methods
     //
     // *****************
-
-    private void ConstrainPositionToScreen()
+    
+    /// <summary>
+    /// Get the appropriate screen boundaries  to constrain the Player to screen/ level.
+    /// </summary>
+    /// <returns><see cref="Square"/></returns>
+    private Square GetMapBoundary()
     {
+        Square appropriateSize = new Square();
+        Square getScreenSizeSquare = GetScreenSize();
+        Square getMapBoundarySquare = GetMapColliderBounds();
+        
+        if (getScreenSizeSquare == null) return getMapBoundarySquare;
+        if (getMapBoundarySquare == null) return getScreenSizeSquare;
+
+        // Determine which values (x,y,z) are smaller and to clamp on those values.
+        if (getScreenSizeSquare.left < getMapBoundarySquare.left)
+            appropriateSize.left = getMapBoundarySquare.left;
+        else
+            appropriateSize.left = getScreenSizeSquare.left;
+
+        if (getScreenSizeSquare.right > getMapBoundarySquare.right)
+            appropriateSize.right = getMapBoundarySquare.right;
+        else
+            appropriateSize.right = getScreenSizeSquare.right;
+
+        if (getScreenSizeSquare.top < getMapBoundarySquare.top)
+            appropriateSize.top = getScreenSizeSquare.top;
+        else
+            appropriateSize.top = getMapBoundarySquare.top;
+
+        if (getScreenSizeSquare.bottom > getMapBoundarySquare.bottom)
+            appropriateSize.bottom = getScreenSizeSquare.bottom;
+        else
+            appropriateSize.bottom = getMapBoundarySquare.bottom;
+
+        return appropriateSize;
+    }
+
+    private Square GetScreenSize()
+    {
+
+        Square screenBoundaries = new Square();
+
         var dist = (transform.position.y - Camera.main.transform.position.y);
 
-        var leftLimitation = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).x;
-        var rightLimitation = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, dist)).x;
-
+        var rightLimitation = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).x;
+        var leftLimitation = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, dist)).x;
         var upLimitation = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).z;
         var downLimitation = Camera.main.ViewportToWorldPoint(new Vector3(0, 1, dist)).z;
 
+        screenBoundaries.left = leftLimitation;
+        screenBoundaries.right = rightLimitation;
+        screenBoundaries.top = upLimitation;
+        screenBoundaries.bottom = downLimitation;
+        
+        return screenBoundaries;
+    }
 
-        Vector3 currentPosition = transform.position;
+    private Square GetMapColliderBounds()
+    {
+        GameObject gameObj = GameObject.FindGameObjectWithTag(Tags.Boundary);
+        BoxCollider boxBoundary = null;
+        Square mapBoundary = new Square();
 
-        currentPosition.x = Mathf.Clamp(transform.position.x, rightLimitation, leftLimitation);
-        currentPosition.z = Mathf.Clamp(transform.position.z, downLimitation, upLimitation);
+        if (gameObj != null)
+            boxBoundary = gameObj.GetComponent<BoxCollider>();
 
+        if (boxBoundary != null)
+        {
+            Bounds bounds = boxBoundary.bounds;
+            Vector3 center = bounds.center;
 
-        transform.position = currentPosition;
+            mapBoundary.left = center.x - bounds.extents.x;
+            mapBoundary.right = center.x + bounds.extents.x;
+            mapBoundary.top = center.z + bounds.extents.z;
+            mapBoundary.bottom = center.z - bounds.extents.z;
+            
+        }
+
+        return mapBoundary;
     }
     
+
+    private Vector3 ConstrainToBoundaries(Vector3 position, Square boundaries)
+    {
+        Vector3 currentPosition = new Vector3(0.0f, 0.0f, 0.0f);
+
+        currentPosition.x = Mathf.Clamp(position.x, boundaries.left, boundaries.right);
+        currentPosition.z = Mathf.Clamp(position.z, boundaries.bottom, boundaries.top);
+
+        return currentPosition;
+    }
 
     // *****************
     // 
     //  Unity Methods
     //
     // *****************
-    
+
     private void Update()
     {
         if (Input.GetButton("Fire1"))
@@ -95,12 +164,10 @@ public class PlayerUnit : GameUnit
             Vector3 mousePos = Input.mousePosition;
             mousePos.z = Camera.main.transform.position.y;  //Camera is at an Y offset from 0.
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
-
+            
             MoveToward(mousePos);
-            ConstrainPositionToScreen();
-            //if (source != null)
-			    //source.PlayOneShot (shoot, 20);
+            transform.position = ConstrainToBoundaries(transform.position, mapBoundaries);
+
         }
     }
 
@@ -126,8 +193,10 @@ public class PlayerUnit : GameUnit
              * upon collision. 
              */
         }
+        
     }
 
+    
 
     //private void OnMouseDrag ()
     //{
@@ -156,3 +225,13 @@ public class PlayerUnit : GameUnit
     }
     */
 }
+
+[Serializable]
+public class Square
+{
+    public float left;
+    public float right;
+    public float top;
+    public float bottom;
+}
+

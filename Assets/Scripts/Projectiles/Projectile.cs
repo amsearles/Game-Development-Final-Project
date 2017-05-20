@@ -82,7 +82,7 @@ public abstract class Projectile : MonoBehaviour
     {
         Rigidbody rigidbody = GetComponent<Rigidbody>();
 
-		if (rigidbody != null) 
+		if (rigidbody != null && !rigidbody.isKinematic)  
 			rigidbody.velocity = transform.forward * moveSpeedComponent.speed * Time.deltaTime;
 		 else 
 			transform.Translate (transform.forward * moveSpeedComponent.speed * Time.deltaTime, Space.World);
@@ -101,7 +101,6 @@ public abstract class Projectile : MonoBehaviour
         // Identify who fired this Projectile by its Tag name.
         bool isOwnerPlayer = ownerTag.Equals(Tags.Player);  //true
         bool isOwnerEnemy = ownerTag.Equals(Tags.Enemy);    //false
-        
         
         // Deal damage to opposing faction.
         if (isOwnerPlayer || isOwnerEnemy)
@@ -125,6 +124,10 @@ public abstract class Projectile : MonoBehaviour
                 Destroy(gameObject);
             }
 
+        }
+        else
+        {
+            Debug.Log("BULLET NOT REGISTERED");
         }
     }
 

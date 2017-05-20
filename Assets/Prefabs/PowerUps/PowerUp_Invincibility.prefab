@@ -57,10 +57,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4142372305036976}
-  - component: {fileID: 114106157126678448}
   - component: {fileID: 114192232479547366}
   - component: {fileID: 114515273464487674}
   - component: {fileID: 135630378057599972}
+  - component: {fileID: 114136504932731508}
+  - component: {fileID: 114186870197699932}
   m_Layer: 0
   m_Name: PowerUp_Invincibility
   m_TagString: PowerUp
@@ -399,7 +400,21 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114106157126678448
+--- !u!114 &114136504932731508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1408425756120786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 438a80817ac91e34eaa7b8e1bb15676f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zigzagFrequency: 5
+  zigzagWaveHeight: 7
+  zigzagWorldspace: 0
+--- !u!114 &114186870197699932
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

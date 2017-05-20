@@ -26,6 +26,9 @@ public class AIMoveZigZag : MonoBehaviour {
                 "That is, the value of which frequency must reach before moving in the opposite direction")]
     public float zigzagWaveHeight = 5f;
 
+    [Tooltip("Zigzag in world space rather than local. NOTE that world space disregards orientation of the object.")]
+    public bool zigzagWorldspace = false;
+
     private MoveSpeedComponent moveSpeedComp;
 
 
@@ -42,15 +45,21 @@ public class AIMoveZigZag : MonoBehaviour {
         zigzagWaveHeight = Mathf.Abs(zigzagWaveHeight);
 	}
 
-    private void FixedUpdate()
+    private void Update()
     {
         Transform transform = GetComponent<Transform>();
+
+        Vector3 direction = transform.right;
+
+        // Use world space if set.
+        if (zigzagWorldspace)
+            direction = Vector3.right;
         
         // Determine the current oscillating value between -1*(zigzagHeight/2) and zigzagHeight/2
         float pingpong = Mathf.PingPong(Time.time * zigzagFrequency, 2*zigzagWaveHeight) - zigzagWaveHeight;
 
         // Move the object via its Right direction axis.
-        transform.position += transform.right * pingpong * Time.deltaTime;
+        transform.position += direction * pingpong * Time.deltaTime;
 
         // Move the object via its Forward direction axis.
         transform.position += transform.forward * moveSpeedComp.speed * Time.deltaTime;

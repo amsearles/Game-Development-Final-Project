@@ -1759,8 +1759,8 @@ MonoBehaviour:
   _invincible: 0
   invincibilitySphere: {fileID: 1799759231154022, guid: 178b7596f3886a84aa0f883b5f3053b0,
     type: 2}
-  _currentHealth: 150
-  _maxHealth: 150
+  _currentHealth: 250
+  _maxHealth: 250
 --- !u!114 &114548278063450958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1799,10 +1799,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onDestructionEffect: {fileID: 1273416113246406, guid: 45756ec3bae781e4ab1061109002e1aa,
     type: 2}
-  shoot: {fileID: 8300000, guid: ce543b6610825c149865540c2453eadf, type: 3}
-  playerUnitBodyMeshes: []
-  playerUnitBodyColliders: []
-  _lives: 3
 --- !u!114 &114745244898179478
 MonoBehaviour:
   m_ObjectHideFlags: 1

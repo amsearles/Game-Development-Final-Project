@@ -100,8 +100,6 @@ public class HealthComponent : MonoBehaviour {
 
         if (currentInvSphere != null)
             currentInvSphere.SetActive(false);
-        else
-            Debug.LogError(currentInvSphere + "InvincibilitySphere NOT FOUNDED");
     }
 
 

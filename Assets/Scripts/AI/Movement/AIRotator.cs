@@ -4,6 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// AIRotator simply rotates the object about itself in random fashion.
+/// This is not meant to set up rotation toward particular targets.
 /// </summary>
 [RequireComponent(typeof(RotateSpeedComponent))]
 public class AIRotator : MonoBehaviour {

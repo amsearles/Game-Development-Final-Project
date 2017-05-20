@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using UnityEngine.UI;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -21,14 +22,17 @@ public class GameController : MonoBehaviour
 
     public GUIText livesText;
 	public GameObject scoreText;
+    public GameObject bossHealth;
 
     [SerializeField]
     private int _score = 0;
     [SerializeField]
     private int _lives = 0;
     
-    private PlayerUnit currentPlayerUnit;
+    public static PlayerUnit currentPlayerUnit;
     private bool _isGameOver = false;
+
+    public GameObject boss;
 
     /*** Properties ***/
     public int lives
@@ -49,7 +53,6 @@ public class GameController : MonoBehaviour
         // Read only. GameController decides when its game over.
     }
 
-
     // *****************
     // 
     //  Unity Methods
@@ -59,6 +62,8 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
+
 		if (_score < 0) _score = 0;
         if (_lives < 0) _lives = 0;
 
@@ -67,12 +72,15 @@ public class GameController : MonoBehaviour
         if (gobj != null)
             currentPlayerUnit = gobj.transform.root.GetComponentInChildren<PlayerUnit>();
 
-        if (currentPlayerUnit == null)
+        if (currentPlayerUnit == null && playerUnit != null)
+        {
             currentPlayerUnit = Instantiate(playerUnit);
-        
-        StartCoroutine(ManagePlayerState());
 
-	}
+        }
+        if (currentPlayerUnit != null)
+            StartCoroutine(ManagePlayerState());
+
+    }
 
     private IEnumerator ManagePlayerState()
     {
@@ -125,7 +133,7 @@ public class GameController : MonoBehaviour
 
         // Find the UIHealthController and re-link the text.
         // TODO: This is a very quick work around by making playerunit static. Find alternative later.
-        UIHealthController.playerunit = currentPlayerUnit;
+        //UIHealthController.playerunit = currentPlayerUnit;
     }
 
 
@@ -134,6 +142,18 @@ public class GameController : MonoBehaviour
         if (isGameOver)
         {
             PauseGame();
+        }
+        if (boss != null)
+        {
+            if (bossHealth != null && bossHealth.GetComponent<UISlideHealthController>() != null)
+            {
+                bossHealth.SetActive(true);
+                bossHealth.GetComponent<UISlideHealthController>().SetGameObject(boss);
+            }
+        }
+        else if (bossHealth != null)
+        {
+            bossHealth.SetActive(false);
         }
     }
 
@@ -162,6 +182,7 @@ public class GameController : MonoBehaviour
 
     public void RestartCurrentScene()
     {
+        UnPauseGame();
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }
@@ -179,8 +200,16 @@ public class GameController : MonoBehaviour
     {
         score += value;
     }
-    
 
+    public GameObject getBoss()
+    {
+        return boss;
+    }
+
+    public void setBoss(GameObject newBoss)
+    {
+        boss = newBoss;
+    }
 }
 
 

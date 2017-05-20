@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f6d7bcf28539c4e84b972227920bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isNeutral: 1
+  isNeutral: 0
   applyAtStartOnly: 0
   damage: 10
   rateOfDamage: 0.05

@@ -102,6 +102,8 @@ GameObject:
   - component: {fileID: 135230746360628342}
   - component: {fileID: 114042833477459892}
   - component: {fileID: 114230913441286934}
+  - component: {fileID: 114707050059028938}
+  - component: {fileID: 114100307040227122}
   m_Layer: 0
   m_Name: PowerUp_WeaponAdditionalDuoBullets
   m_TagString: Untagged
@@ -1423,6 +1425,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &114100307040227122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1193937371592538}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 438a80817ac91e34eaa7b8e1bb15676f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zigzagFrequency: 5
+  zigzagWaveHeight: 10
+  zigzagWorldspace: 0
 --- !u!114 &114230913441286934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1454,6 +1470,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 65
   reverse: 0
+--- !u!114 &114707050059028938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1193937371592538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f93eec1a9945049b261216f3e2f111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114849158247750560
 MonoBehaviour:
   m_ObjectHideFlags: 1

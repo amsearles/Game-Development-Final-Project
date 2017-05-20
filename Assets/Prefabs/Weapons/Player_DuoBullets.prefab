@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2c5827704b2f9746a387c84db2d76e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponName: Player_DuoBullets
+  weaponName: Player_Weapon
   projectile: {fileID: 114682076304836704, guid: 9adcf35b1bd90c8499b6cbcdf781a362,
     type: 2}
   projectileSpawnLocations:
@@ -134,3 +134,4 @@ MonoBehaviour:
   infiniteAmmo: 1
   ammoCount: 10
   rateOfFire: 0.15
+  ownerTag: 

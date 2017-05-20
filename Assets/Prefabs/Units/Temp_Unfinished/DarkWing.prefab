@@ -50,9 +50,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4102523075661732}
   - component: {fileID: 65413942885865970}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tip
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,9 +67,9 @@ GameObject:
   - component: {fileID: 4689098008739262}
   - component: {fileID: 33220997130989808}
   - component: {fileID: 23846492140908922}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mesh
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,9 +82,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4286302449486660}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,9 +98,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4988032617860756}
   - component: {fileID: 65221800950251730}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,9 +159,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4868892271267068}
   - component: {fileID: 54804877677628912}
+  - component: {fileID: 114204273263611924}
+  - component: {fileID: 114041465467206270}
+  - component: {fileID: 114469852910787734}
+  - component: {fileID: 114018832855055570}
+  - component: {fileID: 114917197437395946}
   m_Layer: 0
   m_Name: DarkWing
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,9 +180,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4907022160568220}
   - component: {fileID: 65639215100520266}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightWing
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,9 +226,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4332126947849732}
   - component: {fileID: 65464926989889672}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftWing
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -418,7 +423,7 @@ Transform:
   m_GameObject: {fileID: 1584416118433740}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4689098008739262}
   - {fileID: 4286302449486660}
@@ -503,7 +508,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &65221800950251730
 BoxCollider:
@@ -553,3 +558,68 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 0.8, z: 1.15}
   m_Center: {x: 1.37, y: 0, z: -1.2}
+--- !u!114 &114018832855055570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1584416118433740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b73f540ff0cb9f48b066776d06dd71c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+--- !u!114 &114041465467206270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1584416118433740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6303182424cf1334b8bc21fe78033196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _invincible: 0
+  invincibilitySphere: {fileID: 1799759231154022, guid: 178b7596f3886a84aa0f883b5f3053b0,
+    type: 2}
+  _currentHealth: 15000
+  _maxHealth: 15000
+--- !u!114 &114204273263611924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1584416118433740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201c2d28d27740c47a50236bc641395f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDestructionEffect: {fileID: 0}
+  target: {fileID: 0}
+--- !u!114 &114469852910787734
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1584416118433740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f25abf2c639174e9bbd1658191f33b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 10
+--- !u!114 &114917197437395946
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1584416118433740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40640f13b08104b4aad6fbb4afc0c780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 50

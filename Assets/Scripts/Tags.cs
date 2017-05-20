@@ -26,6 +26,11 @@ public static class Tags {
         get { return "GameController"; }
     }
 
+    public static string Boundary
+    {
+        get { return "Boundary"; }
+    }
+
     /// <summary>
     /// Determine if the game object with <see cref="tag1"/> is an adversary of <see cref="tag2"/>.
     /// </summary>
