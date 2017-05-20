@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: aa1abbe6153155d44bfd7beac1d5539b
+timeCreated: 1482936273
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Cockpit
+    100002: Cockpit_Cover
+    100004: Engine_l
+    100006: Engine_r
+    100008: Gun_Cover_l
+    100010: Gun_Cover_r
+    100012: Gun_l
+    100014: Gun_r
+    100016: Main
+    100018: //RootNode
+    100020: Objecr
+    100022: Object007
+    100024: Wing_part01_l
+    100026: Wing_part01_r
+    100028: Wing_part02_l
+    100030: Wing_part02_r
+    100032: Wing_part03_l
+    100034: Wing_part03_r
+    100036: Wing_part04_l
+    100038: Wing_part04_r
+    400000: Cockpit
+    400002: Cockpit_Cover
+    400004: Engine_l
+    400006: Engine_r
+    400008: Gun_Cover_l
+    400010: Gun_Cover_r
+    400012: Gun_l
+    400014: Gun_r
+    400016: Main
+    400018: //RootNode
+    400020: Objecr
+    400022: Object007
+    400024: Wing_part01_l
+    400026: Wing_part01_r
+    400028: Wing_part02_l
+    400030: Wing_part02_r
+    400032: Wing_part03_l
+    400034: Wing_part03_r
+    400036: Wing_part04_l
+    400038: Wing_part04_r
+    2300000: Cockpit
+    2300002: Cockpit_Cover
+    2300004: Engine_l
+    2300006: Engine_r
+    2300008: Gun_Cover_l
+    2300010: Gun_Cover_r
+    2300012: Gun_l
+    2300014: Gun_r
+    2300016: Main
+    2300018: Objecr
+    2300020: Object007
+    2300022: Wing_part01_l
+    2300024: Wing_part01_r
+    2300026: Wing_part02_l
+    2300028: Wing_part02_r
+    2300030: Wing_part03_l
+    2300032: Wing_part03_r
+    2300034: Wing_part04_l
+    2300036: Wing_part04_r
+    3300000: Cockpit
+    3300002: Cockpit_Cover
+    3300004: Engine_l
+    3300006: Engine_r
+    3300008: Gun_Cover_l
+    3300010: Gun_Cover_r
+    3300012: Gun_l
+    3300014: Gun_r
+    3300016: Main
+    3300018: Objecr
+    3300020: Object007
+    3300022: Wing_part01_l
+    3300024: Wing_part01_r
+    3300026: Wing_part02_l
+    3300028: Wing_part02_r
+    3300030: Wing_part03_l
+    3300032: Wing_part03_r
+    3300034: Wing_part04_l
+    3300036: Wing_part04_r
+    4300000: Cockpit_Cover
+    4300002: Cockpit
+    4300004: Engine_r
+    4300006: Gun_Cover_r
+    4300008: Wing_part03_r
+    4300010: Gun_r
+    4300012: Wing_part01_r
+    4300014: Objecr
+    4300016: Wing_part04_r
+    4300018: Wing_part02_r
+    4300020: Main
+    4300022: Gun_Cover_l
+    4300024: Wing_part04_l
+    4300026: Gun_l
+    4300028: Wing_part02_l
+    4300030: Wing_part03_l
+    4300032: Engine_l
+    4300034: Wing_part01_l
+    4300036: Object007
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,223 @@
+fileFormatVersion: 2
+guid: 7c963bf5c41b51b4a8b381953f659c79
+timeCreated: 1485098362
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Canon_l
+    100002: Canon_r
+    100004: Cockpit
+    100006: Crank_l
+    100008: Crank_r
+    100010: laser gun
+    100012: MainBody_prt01
+    100014: MainBody_prt02
+    100016: MainEngine
+    100018: MainPipe_l
+    100020: MainPipe_r
+    100022: MainWing_prt01_l
+    100024: MainWing_prt01_r
+    100026: MainWing_prt02_l
+    100028: MainWing_prt02_r
+    100030: MainWing_prt03_l
+    100032: MainWing_prt03_r
+    100034: MecHand_ver1.0_l
+    100036: MecHand_ver1.0_r
+    100038: MecHand_ver2.0_l
+    100040: MecHand_ver2.0_r
+    100042: MiniEngine_l
+    100044: MiniEngine_r
+    100046: //RootNode
+    100048: PipeSec_l
+    100050: PipeSec_r
+    100052: ShieldCell_l
+    100054: ShieldCell_r
+    100056: ShieldPlate_l
+    100058: ShieldPlate_r
+    100060: Tail
+    400000: Canon_l
+    400002: Canon_r
+    400004: Cockpit
+    400006: Crank_l
+    400008: Crank_r
+    400010: laser gun
+    400012: MainBody_prt01
+    400014: MainBody_prt02
+    400016: MainEngine
+    400018: MainPipe_l
+    400020: MainPipe_r
+    400022: MainWing_prt01_l
+    400024: MainWing_prt01_r
+    400026: MainWing_prt02_l
+    400028: MainWing_prt02_r
+    400030: MainWing_prt03_l
+    400032: MainWing_prt03_r
+    400034: MecHand_ver1.0_l
+    400036: MecHand_ver1.0_r
+    400038: MecHand_ver2.0_l
+    400040: MecHand_ver2.0_r
+    400042: MiniEngine_l
+    400044: MiniEngine_r
+    400046: //RootNode
+    400048: PipeSec_l
+    400050: PipeSec_r
+    400052: ShieldCell_l
+    400054: ShieldCell_r
+    400056: ShieldPlate_l
+    400058: ShieldPlate_r
+    400060: Tail
+    2300000: Canon_l
+    2300002: Canon_r
+    2300004: Cockpit
+    2300006: Crank_l
+    2300008: Crank_r
+    2300010: laser gun
+    2300012: MainBody_prt01
+    2300014: MainBody_prt02
+    2300016: MainEngine
+    2300018: MainPipe_l
+    2300020: MainPipe_r
+    2300022: MainWing_prt01_l
+    2300024: MainWing_prt01_r
+    2300026: MainWing_prt02_l
+    2300028: MainWing_prt02_r
+    2300030: MainWing_prt03_l
+    2300032: MainWing_prt03_r
+    2300034: MecHand_ver1.0_l
+    2300036: MecHand_ver1.0_r
+    2300038: MecHand_ver2.0_l
+    2300040: MecHand_ver2.0_r
+    2300042: MiniEngine_l
+    2300044: MiniEngine_r
+    2300046: PipeSec_l
+    2300048: PipeSec_r
+    2300050: ShieldCell_l
+    2300052: ShieldCell_r
+    2300054: ShieldPlate_l
+    2300056: ShieldPlate_r
+    2300058: Tail
+    3300000: Canon_l
+    3300002: Canon_r
+    3300004: Cockpit
+    3300006: Crank_l
+    3300008: Crank_r
+    3300010: laser gun
+    3300012: MainBody_prt01
+    3300014: MainBody_prt02
+    3300016: MainEngine
+    3300018: MainPipe_l
+    3300020: MainPipe_r
+    3300022: MainWing_prt01_l
+    3300024: MainWing_prt01_r
+    3300026: MainWing_prt02_l
+    3300028: MainWing_prt02_r
+    3300030: MainWing_prt03_l
+    3300032: MainWing_prt03_r
+    3300034: MecHand_ver1.0_l
+    3300036: MecHand_ver1.0_r
+    3300038: MecHand_ver2.0_l
+    3300040: MecHand_ver2.0_r
+    3300042: MiniEngine_l
+    3300044: MiniEngine_r
+    3300046: PipeSec_l
+    3300048: PipeSec_r
+    3300050: ShieldCell_l
+    3300052: ShieldCell_r
+    3300054: ShieldPlate_l
+    3300056: ShieldPlate_r
+    3300058: Tail
+    4300000: Cockpit
+    4300002: MainEngine
+    4300004: MainBody_prt01
+    4300006: laser gun
+    4300008: MainBody_prt02
+    4300010: Tail
+    4300012: MecHand_ver2.0_l
+    4300014: PipeSec_l
+    4300016: Crank_l
+    4300018: Canon_l
+    4300020: MiniEngine_l
+    4300022: MainPipe_l
+    4300024: MainWing_prt03_l
+    4300026: MainWing_prt02_l
+    4300028: MecHand_ver1.0_l
+    4300030: ShieldPlate_l
+    4300032: ShieldCell_l
+    4300034: MainWing_prt01_l
+    4300036: MecHand_ver2.0_r
+    4300038: PipeSec_r
+    4300040: Crank_r
+    4300042: Canon_r
+    4300044: MiniEngine_r
+    4300046: MainPipe_r
+    4300048: MainWing_prt03_r
+    4300050: MainWing_prt02_r
+    4300052: MecHand_ver1.0_r
+    4300054: ShieldPlate_r
+    4300056: ShieldCell_r
+    4300058: MainWing_prt01_r
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

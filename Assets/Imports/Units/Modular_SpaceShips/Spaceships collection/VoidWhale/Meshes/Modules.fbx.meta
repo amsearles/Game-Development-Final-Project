@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: 3605a16be5ec4f54aad3abb14b94ad1c
+timeCreated: 1483958891
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Battery
+    100002: Bridge
+    100004: Directional_Light
+    100006: Hatch
+    100008: Large_Thruster
+    100010: Lazer_Gun
+    100012: Left_Windbreaker
+    100014: Left_Wing
+    100016: Main_Module_1
+    100018: Main_Module_2
+    100020: Main_Module_3
+    100022: Main_Module_4
+    100024: Main_Module_5
+    100026: Missile_Launcher
+    100028: //RootNode
+    100030: Omni_Light
+    100032: Pipes
+    100034: Right_Windbreaker
+    100036: Right_Wing
+    100038: Runway
+    100040: Sensor
+    100042: Small_Thruster
+    100044: Storage
+    100046: Turret
+    400000: Battery
+    400002: Bridge
+    400004: Directional_Light
+    400006: Hatch
+    400008: Large_Thruster
+    400010: Lazer_Gun
+    400012: Left_Windbreaker
+    400014: Left_Wing
+    400016: Main_Module_1
+    400018: Main_Module_2
+    400020: Main_Module_3
+    400022: Main_Module_4
+    400024: Main_Module_5
+    400026: Missile_Launcher
+    400028: //RootNode
+    400030: Omni_Light
+    400032: Pipes
+    400034: Right_Windbreaker
+    400036: Right_Wing
+    400038: Runway
+    400040: Sensor
+    400042: Small_Thruster
+    400044: Storage
+    400046: Turret
+    2300000: Battery
+    2300002: Bridge
+    2300004: Directional_Light
+    2300006: Hatch
+    2300008: Large_Thruster
+    2300010: Lazer_Gun
+    2300012: Left_Windbreaker
+    2300014: Left_Wing
+    2300016: Main_Module_1
+    2300018: Main_Module_2
+    2300020: Main_Module_3
+    2300022: Main_Module_4
+    2300024: Main_Module_5
+    2300026: Missile_Launcher
+    2300028: Omni_Light
+    2300030: Pipes
+    2300032: Right_Windbreaker
+    2300034: Right_Wing
+    2300036: Runway
+    2300038: Sensor
+    2300040: Small_Thruster
+    2300042: Storage
+    2300044: Turret
+    3300000: Battery
+    3300002: Bridge
+    3300004: Directional_Light
+    3300006: Hatch
+    3300008: Large_Thruster
+    3300010: Lazer_Gun
+    3300012: Left_Windbreaker
+    3300014: Left_Wing
+    3300016: Main_Module_1
+    3300018: Main_Module_2
+    3300020: Main_Module_3
+    3300022: Main_Module_4
+    3300024: Main_Module_5
+    3300026: Missile_Launcher
+    3300028: Omni_Light
+    3300030: Pipes
+    3300032: Right_Windbreaker
+    3300034: Right_Wing
+    3300036: Runway
+    3300038: Sensor
+    3300040: Small_Thruster
+    3300042: Storage
+    3300044: Turret
+    4300000: Directional_Light
+    4300002: Pipes
+    4300004: Right_Wing
+    4300006: Large_Thruster
+    4300008: Missile_Launcher
+    4300010: Main_Module_5
+    4300012: Right_Windbreaker
+    4300014: Hatch
+    4300016: Main_Module_1
+    4300018: Sensor
+    4300020: Main_Module_3
+    4300022: Small_Thruster
+    4300024: Lazer_Gun
+    4300026: Main_Module_2
+    4300028: Left_Windbreaker
+    4300030: Battery
+    4300032: Storage
+    4300034: Bridge
+    4300036: Turret
+    4300038: Omni_Light
+    4300040: Runway
+    4300042: Left_Wing
+    4300044: Main_Module_4
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

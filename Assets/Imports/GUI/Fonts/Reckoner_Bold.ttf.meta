@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 8ff91f782bf8b0d488c61127e98d4a79
+timeCreated: 1492997440
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Reckoner Bold
+  fontNames:
+  - Reckoner Bold
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
