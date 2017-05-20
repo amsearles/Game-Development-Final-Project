@@ -32,11 +32,11 @@ Focus on Mockups and design issues. Determine best practices that will be used. 
 ---
 ##Due 04/22: 
 
-Work on Menus - Jimmy
+~~Work on Menus - Jimmy
  
-Work on Enemies - Anthony
+~~Work on Enemies - Anthony
 
-Work on Player - Elric
+~~Work on Player - Elric
 
 Goal: hopefully create a basic prototype as a proof of concept by this 4/22.
 
@@ -50,7 +50,7 @@ Goal: hopefully create a basic prototype as a proof of concept by this 4/22.
 ---
 ##Due 04/29:
 
-Work on Powerups- Elric
+~~Work on Powerups- Elric
 Work on enemy projectiles- Jimmy
 Work on trail - Anthony
 
@@ -63,9 +63,9 @@ Work on trail - Anthony
 ---
 ##Due 05/06:
 
-work on enemies/player and various projectiles - Jimmy
+~~work on enemies/player and various projectiles - Jimmy
 work on trail powerup - Elric
-work on spawn patterns and level - Anthony
+work on spawning and moving background - Anthony
 
 ###Scrum meeting notes
 *realized we had more bugs
@@ -74,22 +74,22 @@ work on spawn patterns and level - Anthony
 //TODO
 
 ---
-##Due 05/13:
-
-To be determined
+##Due  05/13:
+~~work on a new and updated UI -Elric
+Work on multiple new powerups, animations, bug fixes - Jimmy
+work on level design and balance - Anthony
 
 ###Scrum meeting notes:
-
+We decided to scrap the trail and just focus on projectiles.
+We focused on finishing a complete game by Saturday and just fixing various bugs afterwards
 //TODO
 
 ---
 ##Due 05/20:DEMO DAY
 
-Check for bugs/crashes and try to optimize if possible.
-
-Present to class - Somebody
-
-Moral support/ help with slides - Other two
+~~Presention to class - Elric 
+Add screen boundary and boss - Jimmy
+Adjust level difficulty and add infinite spawning - Anthony
 
 ###Scrum meeting notes:
 
