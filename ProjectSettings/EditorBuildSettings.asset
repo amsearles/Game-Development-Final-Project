@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/GameIntro.unity
   - enabled: 0
     path: Assets/Scenes/MainMenu.unity
-  - enabled: 0
-    path: Assets/ElricsStuff/Scenes/MainMenu_V2.unity
+  - enabled: 1
+    path: Assets/Scenes/MainMenu_V2.unity
   - enabled: 1
     path: Assets/NewMainScene.unity
   - enabled: 0
