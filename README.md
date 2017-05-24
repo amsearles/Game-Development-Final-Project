@@ -1,24 +1,16 @@
-#Final Project - [Game Name: Currently Undecided]
-[Insert Game Name] is a 2D rapid pace game. The concept is a combination of classic games such as Snake and Asteroids. The player will control a star and emit a star trail to prevent enemies from passing. However, the twist is that the player must not collide with their own star trail as well as enemies, otherwise they will suffer damage or destruction. The player will be given a score and lives.
-[Insert Game Name] is set to be simplistic enough to be playable as a mobile app but provide an intense challenge to any player. 
+#Final Project
+T-12 is a 2.5D rapid pace, top-down, infinite shooter game. The gameplay is simple; the player will control a plane and shoot down enemy targets while evading shots in return. The player will be given a score, lives, health, with the goal of accumulating as many points as possible.
+T-12 is set to be simplistic enough to be playable as a mobile app but provide an intense challenge to any player. 
 
 #Platform
 Desktop (hopefully adaptable to targeted platform: Android)
 
-#Final Project - Documentation (In Progress)
-https://docs.google.com/document/d/1hWoinUAbP5wlRNFJ0ov8vTejgj5cC5cCUm3oBFIoAQA/edit?usp=sharing
-
-#Final Project - Class Diagram (In Progress)
-https://drive.google.com/file/d/0B9t3Wj73SIawOWtuckx4azVkVmM/view?usp=sharing
-
 #Meeting Date
 Thursdays 2-4pm
 
-#Due Dates / Milestones
-
 ##Due 04/08:
+Start of this project.
 Prepare This Readme.
-
 
 ##Due 04/15:
 
@@ -26,7 +18,7 @@ Focus on Mockups and design issues. Determine best practices that will be used. 
 
 ###Scrum meeting notes:
 * Find assets and agree upon the selection.
-* Create Class Diagram.
+* Create Class Diagram - difficult to predict ahead. Agreed on trial and error.
 * Think of more ideas and approaches to the project.
 
 ---
@@ -45,7 +37,6 @@ Goal: hopefully create a basic prototype as a proof of concept by this 4/22.
 * Go through all the bugs involved with merging, fixed each one.
 * Emphasis on consistent publishes to unity collab
 * Polish scene and adjust values to have a better prototype by Saturday.
-//TODO
 
 ---
 ##Due 04/29:
@@ -55,10 +46,8 @@ Work on enemy projectiles- Jimmy
 Work on trail - Anthony
 
 ###Scrum meeting notes:
-* fixed the bugs we had
-* decided to focus on one singlelevel with an ever increasing difficulty
-
-//TODO
+* Fixed the bugs we had
+* Decided to focus on one singlelevel with an ever increasing difficulty
 
 ---
 ##Due 05/06:
@@ -68,10 +57,9 @@ work on trail powerup - Elric
 work on spawning and moving background - Anthony
 
 ###Scrum meeting notes
-*realized we had more bugs
-* focused on finishing the bare basics so that we can polish stuff at a later time
-
-//TODO
+* Realized we had more bugs
+* Focused on finishing the bare basics so that we can polish stuff at a later time
+* Realized we went too far into OOP design and did not capitalize on Unity's component design. Refactor code base to be more component friendly.
 
 ---
 ##Due  05/13:
@@ -82,7 +70,6 @@ work on level design and balance - Anthony
 ###Scrum meeting notes:
 We decided to scrap the trail and just focus on projectiles.
 We focused on finishing a complete game by Saturday and just fixing various bugs afterwards
-//TODO
 
 ---
 ##Due 05/20:DEMO DAY
@@ -90,10 +77,6 @@ We focused on finishing a complete game by Saturday and just fixing various bugs
 ~~Presention to class - Elric 
 Add screen boundary and boss - Jimmy
 Adjust level difficulty and add infinite spawning - Anthony
-
-###Scrum meeting notes:
-
-//TODO
 
 ---
 ##Notes
